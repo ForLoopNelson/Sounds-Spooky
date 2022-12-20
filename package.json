@@ -1,7 +1,7 @@
 {
-  "name": "binary-upload-template",
+  "name": "spooky-sounds-uploader",
   "version": "1.0.0",
-  "description": "FullStack Template to upload files to Cloudinary, and use MongoDB",
+  "description": "FullStack App to upload audio files related to Horror Sounds to Cloudinary, and use MongoDB and mongoose",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
