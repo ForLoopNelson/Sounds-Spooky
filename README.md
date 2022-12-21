@@ -22,3 +22,9 @@
 # Run
 
 `npm start`
+
+# TODO's
+
+`Create a forgot password, reset password feature`
+` Prompt user if file type is not supported`
+`User Profile Picture`
