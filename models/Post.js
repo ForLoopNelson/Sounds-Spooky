@@ -5,9 +5,11 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  image: {
+  audio: {
     type: String,
-    require: true,
+    default: "background",
+    enum: ["creature sounds", "ambient", "other SFX"],
+    required: true,
   },
   cloudinaryId: {
     type: String,
