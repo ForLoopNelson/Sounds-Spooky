@@ -10,16 +10,27 @@
           <div class="mt-5">
             <h2>Add a post</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+                <div class="mb-3">
+                  <label for="title" class="form-label">Sound Catergory</label>
+                  <!-- <input type="text" class="form-control" id="title" name="title"> -->
+                  <select id="audio" name="audio">
+                    <option value="background" selected>background</option>
+                    <option value="creature sounds">Creature Sounds</option>
+                    <option value="ambient">Ambient</option>
+                    <option value="other SFX">Other SFX</option>
+                  </select>
+              </div>
               <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
                   <input type="text" class="form-control" id="title" name="title">
               </div>
+            
               <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
+                <label for="caption" class="form-label">Caption- Brief Desctiption of the Sound</label>
                 <textarea class="form-control" id="caption" name="caption"></textarea>
               </div>
               <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
+                <label for="imgUpload" class="form-label">Audio File</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
