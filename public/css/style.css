@@ -9,6 +9,19 @@ a {
   text-decoration: none;
 }
 
+#main-img {
+  width: 6%;
+  image-rendering: crisp-edges;
+
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  border-top: 2px ridge #00bc8c;
+}
+
 /* h1,
 .text-center {
   background: rgb(2, 0, 36);
@@ -17,3 +30,4 @@ a {
     rgba(234, 242, 244, 1) 100%
   );
 } */
+
