@@ -10,15 +10,17 @@ a {
 }
 
 #main-img {
-  width: 6%;
-  image-rendering: crisp-edges;
+  width: 9%;
+  image-rendering:optimizeQuality;
 
 }
 
 footer {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  font-size: large;
+  margin-top: 20px;
+  padding: 10px 0 20px 0;
   border-top: 2px ridge #00bc8c;
 }
 
