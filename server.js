@@ -14,6 +14,7 @@ const mainRoutes = require("./routes/main")
 const postRoutes = require("./routes/posts")
 const commentRoutes = require("./routes/Comment")
 
+
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" })
 
@@ -48,6 +49,8 @@ app.use(
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
   })
 )
+
+
 
 // Passport middleware
 app.use(passport.initialize())
