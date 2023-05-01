@@ -1,6 +1,7 @@
 const cloudinary = require("../middleware/cloudinary")
 const Post = require("../models/Post")
 const Comment = require("../models/Comment")
+const ffmpeg = require('fluent-ffmpeg')
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -33,11 +34,22 @@ module.exports = {
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary
-      const result = await cloudinary.uploader.upload(req.file.path)
+      const result = await cloudinary.uploader.upload(req.file.path, {resource_type: "video", folder: "audio_files/"})
+
+      // ffprobe Middleware
+//     ffmpeg.ffprobe(req.file.path, (err, metadata) => {
+//       if (err) {
+//     console.log(err);
+//     return;
+//   }
+
+//   const duration = metadata.format.duration;
+//   console.log(duration);
+// })
 
       await Post.create({
         title: req.body.title,
-        image: result.secure_url,
+        audio: result.secure_url,
         cloudinaryId: result.public_id,
         caption: req.body.caption,
         likes: 0,
