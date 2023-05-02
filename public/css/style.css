@@ -9,9 +9,16 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: 'Creepster', 'Roboto', sans-serif;
+  font-size: 5em;
+}
+
 #main-img {
-  width: 9%;
-  image-rendering:optimizeQuality;
+  width: 6%;
+  padding-bottom: 20px;
+  aspect-ratio: 2/3;
+  
 
 }
 
