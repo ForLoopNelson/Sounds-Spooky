@@ -45,9 +45,13 @@
             <li class="col-6 justify-content-between mt-5">
               <a href="/post/<%= posts[i]._id%>">
                 <!-- <img class="img-fluid" src="<%= posts[i].image%>"> -->
-                <audio controls>
+                <!-- <audio controls>
                   <source src="<%= posts.audio %>" type="audio" duration="<%= posts.duration %>">
-                </audio>
+                </audio> -->
+                <audio src="<%= posts.audio %>" type="audio" duration="<%= posts.duration %>">"></audio>
+                <button data-playing="false" role="switch" aria-checked="false">
+                  <span>Play/Pause</span>
+                </button>
 
               </a>
             </li>
@@ -59,5 +63,56 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const AudioContext = window.AudioContext || window.webkitAudioContext
+
+    const audioContext = new AudioContext()
+
+    // get the audio element
+    const audioElement = document.querySelector("audio")
+
+    // pass it into the audio context
+    const track = audioContext.createMediaElementSource(audioElement)
+
+    const playButton = document.querySelector("button")
+    track.connect(audioContext.destination)
+
+    playButton.addEventListener(
+      "click",
+      () => {
+        // Check if context is in suspended state (autoplay policy)
+        if (audioContext.state === "suspended") {
+          audioContext.resume()
+        }
+
+        // Play or pause track depending on state
+        if (playButton.dataset.playing === "false") {
+          audioElement.play()
+          playButton.dataset.playing = "true"
+        } else if (playButton.dataset.playing === "true") {
+          audioElement.pause()
+          playButton.dataset.playing = "false"
+        }
+      },
+      false
+    )
+
+    audioElement.addEventListener(
+      "ended",
+      () => {
+        playButton.dataset.playing = "false"
+      },
+      false
+    )
+
+    audioElement.addEventListener(
+      "ended",
+      () => {
+        playButton.dataset.playing = "false"
+      },
+      false
+    );
+  </script>
   </div>
   <%- include('partials/footer') -%>
