@@ -4,12 +4,12 @@
       <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <!-- <img class="img-fluid" src="<%= posts[i].image%>"> -->
-              <audio controls>
-                <source src="<%= posts.audio %>" type="audio" duration="<%= posts.duration %>">
-              </audio>
-            </a>
+            <!-- <a href="/post/<%= posts[i]._id%>"> -->
+
+            <audio controls>
+              <source src="<%= posts.audio %>" type="audio">
+            </audio>
+            <!-- </a> -->
 
           </li>
           <% } %>
