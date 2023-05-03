@@ -5,19 +5,13 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // audio: {
-  //   type: String,
-  //   default: "background",
-  //   required: true,
-  // },
+ 
   audio: {
   type: String,
   default: "background",
   required: true,
 
 },
-
-
 
   cloudinaryId: {
     type: String,
