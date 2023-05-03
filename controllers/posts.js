@@ -33,23 +33,20 @@ module.exports = {
   },
   createPost: async (req, res) => {
     try {
-      // Upload image to cloudinary
+      // Upload audio to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path, {resource_type: "video", folder: "audio_files/"})
 
-      // ffprobe Middleware
-//     ffmpeg.ffprobe(req.file.path, (err, metadata) => {
-//       if (err) {
-//     console.log(err);
-//     return;
-//   }
+      
+    // Generate a new URL for the audio asset with the "auto" parameter
+    const audioUrl = cloudinary.url(result.public_id, {
+      resource_type: 'video',
+      quality: 'auto'
+    });
 
-//   const duration = metadata.format.duration;
-//   console.log(duration);
-// })
-
+ 
       await Post.create({
         title: req.body.title,
-        audio: result.secure_url,
+        audio: audioUrl,
         cloudinaryId: result.public_id,
         caption: req.body.caption,
         likes: 0,
