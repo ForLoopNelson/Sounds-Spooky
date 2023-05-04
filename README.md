@@ -1,3 +1,5 @@
+![alt text](https://github.com/ForLoopNelson/Sounds-Spooky/blob/main/icons8-horror-64.png?raw=true)
+
 # About
 
 `A full stack app to upload audio pertaining to Horror Movie Sound Design using Cloudinary, MongoDB, express`
@@ -28,3 +30,7 @@
 `Create a forgot password, reset password feature`
 ` Prompt user if file type is not supported`
 `User Profile Picture`
+`Have feed show posts from mutual Users (followers)`
+`Get Categories to work`
+`Set 30 second limit for audio files`
+`Setup another way to login, like Google or github`
