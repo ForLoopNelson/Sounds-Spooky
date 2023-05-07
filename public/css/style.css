@@ -12,14 +12,17 @@ a {
 h1 {
   font-family: 'Creepster', 'Roboto', sans-serif;
   font-size: 5em;
+  text-shadow: 2px 0 5px #00bc8c;
+}
+
+.add-post {
+  text-decoration: underline #00bc8c;
+  padding-bottom: 18px;
 }
 
 #main-img {
   width: 7%;
   padding-bottom: 20px;
-  
-  
-
 }
 
 footer {
@@ -32,7 +35,7 @@ footer {
 }
 
 .user-info  {
- box-shadow: 7px -2px #00bc8c;
+ text-shadow: 0 0 15px #00bc8c;
 
 }
 
