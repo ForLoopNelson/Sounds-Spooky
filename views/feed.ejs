@@ -6,8 +6,19 @@
           <li class="col-6 justify-content-between mt-5">
             <!-- <a href="/post/<%= posts[i]._id%>"> -->
 
+
+            <h3>
+              <%= posts[i].title %>
+            </h3>
+            <p><strong>Category</strong>: <% if (posts[i].category) { %>
+                <%= posts[i].category.category %>
+                  <% } %>
+            </p>
+            <p><strong>Created By:</strong>
+              <%= posts[i].user.userName %>
+            </p>
             <audio controls>
-              <source src="<%= posts.audio %>" type="audio">
+              <source src="<%= posts[i].audio %>" type="">
             </audio>
             <!-- </a> -->
 

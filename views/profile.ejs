@@ -17,21 +17,21 @@
             <div class="mb-3">
               <label for="title" class="form-label">Sound Category:&nbsp;</label>
 
-              <select id="audio" name="audio">
+              <select id="audio" name="category">
                 <option value="background" selected>background</option>
-                <option value="creature sounds">Creature Sounds</option>
-                <option value="ambient">Ambient</option>
-                <option value="other SFX">Other SFX</option>
+                <option value="Creature Sounds">Creature Sounds</option>
+                <option value="Ambient">Ambient</option>
+                <option value="Other SFX">Other SFX</option>
               </select>
             </div>
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" name="title">
+              <input type="text" class="form-control" id="title" name="title" spellcheck="true">
             </div>
 
             <div class="mb-3">
               <label for="caption" class="form-label">Caption- Brief description of the sound</label>
-              <textarea class="form-control" id="caption" name="caption"></textarea>
+              <textarea class="form-control" id="caption" name="caption" spellcheck="true"></textarea>
             </div>
             <div class="mb-3">
               <label for="imgUpload" class="form-label">Select audio file to upload:</label>
@@ -53,7 +53,9 @@
                 <h3>
                   <%= posts[i].title %>
                 </h3>
-                <p><strong>Category</strong>: WIP
+                <p><strong>Category</strong>: <% if (posts[i].category) { %>
+                    <%= posts[i].category.category %>
+                      <% } %>
                 </p>
                 <button data-playing="false" role="switch" aria-checked="false">
 
