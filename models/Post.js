@@ -8,7 +8,6 @@ const PostSchema = new mongoose.Schema({
  
   audio: {
   type: String,
-  default: "background",
   required: true,
 
 },
@@ -28,6 +27,10 @@ const PostSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
+  },
+  category: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Category",
   },
   createdAt: {
     type: Date,
