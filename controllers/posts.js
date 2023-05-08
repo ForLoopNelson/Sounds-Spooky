@@ -1,12 +1,12 @@
 const cloudinary = require("../middleware/cloudinary")
 const Post = require("../models/Post")
 const Comment = require("../models/Comment")
-const ffmpeg = require('fluent-ffmpeg')
+const Category = require("../models/Category")
 
 module.exports = {
   getProfile: async (req, res) => {
     try {
-      const posts = await Post.find({ user: req.user.id })
+      const posts = await Post.find({ user: req.user.id }).sort({ createdAt: "desc" }).populate("category").lean()
       res.render("profile.ejs", { posts: posts, user: req.user })
     } catch (err) {
       console.log(err)
@@ -14,8 +14,8 @@ module.exports = {
   },
   getFeed: async (req, res) => {
     try {
-      const posts = await Post.find().sort({ createdAt: "desc" }).lean()
-      res.render("feed.ejs", { posts: posts })
+      const posts = await Post.find({ user: req.user.id }).sort({ createdAt: "desc" }).populate("category").populate("user").lean()
+      res.render("feed.ejs", { posts: posts})
     } catch (err) {
       console.log(err)
     }
@@ -42,6 +42,14 @@ module.exports = {
       resource_type: 'video',
       quality: 'auto'
     });
+    
+
+     // Find or create category
+    const categoryName = req.body.category;
+    let category = await Category.findOne({ category: categoryName });
+    if (!category) {
+      category = await Category.create({ category: categoryName });
+    }
 
  
       await Post.create({
@@ -51,6 +59,7 @@ module.exports = {
         caption: req.body.caption,
         likes: 0,
         user: req.user.id,
+        category: category._id
       })
       console.log("Post has been added!")
       res.redirect("/profile")
