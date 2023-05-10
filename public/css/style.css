@@ -23,6 +23,7 @@ h1 {
 #main-img {
   width: 7%;
   padding-bottom: 20px;
+  filter: drop-shadow(1px 3px #00bc8c);
 }
 
 footer {
