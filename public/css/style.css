@@ -48,7 +48,17 @@ footer {
   margin-top: 30px;
 }
 
+#trash {
+  margin-right: 120px;
+}
 
+#comment {
+  width: 45%;
+}
+
+.btn-outline-danger {
+  margin-top: 25px;
+}
 
 
 
