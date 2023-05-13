@@ -56,6 +56,14 @@ footer {
   width: 45%;
 }
 
+.box-bg {
+  border: 1px ridge #73e6e6;
+  background:#242124;
+  margin-right:  290px;
+  padding-bottom: 10px;
+  
+}
+
 .btn-outline-danger {
   margin-top: 25px;
 }
