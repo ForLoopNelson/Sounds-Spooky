@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
   <div class="container">
     <div class="row justify-content-center mt-5">
-      <div class="col-6">
+      <div class="col-6 box-bg">
         <h2>
           <%= post.title %>
         </h2>
@@ -10,7 +10,7 @@
           <source src="<%= post.audio%>" type="">
         </audio>
 
-        </button>
+
         <div class="row justify-content-between">
           <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
             <button class="btn btn-primary fa fa-heart" type="submit"></button>
@@ -25,12 +25,12 @@
         </div>
       </div>
       <div class="col-3 mt-5">
-        <h4>description</h4>
-        <p>
+        <h3>Description</h3>
+        <p class="add-pad">
           <%= post.caption %>
         </p>
       </div>
-      <h2>Add a comment</h2>
+      <h2 class="add-pad">Add a comment</h2>
       <form action="/comment/createComment/<%=post._id%>" method="POST">
         <div class="mb-3">
           <label for="comment" class="form-label">Comment</label>
