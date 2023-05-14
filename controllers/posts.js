@@ -67,20 +67,60 @@ module.exports = {
       console.log(err)
     }
   },
+  // likePost: async (req, res) => {
+  //   try {
+  //     await Post.findOneAndUpdate(
+  //       { _id: req.params.id },
+  //       {
+  //         $inc: { likes: 1 },
+  //       }
+  //     )
+  //     console.log("Likes +1")
+  //     res.redirect(`/post/${req.params.id}`)
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // },
   likePost: async (req, res) => {
-    try {
+  try {
+    const post = await Post.findOne({ _id: req.params.id }).select("likedBy")
+    console.log(post.likedBy)
+    if (!post) {
+      return res.status(404).send("Post not found")
+    }
+
+    const userId = req.user._id
+    const isLiked = post.likedBy && post.likedBy.includes(userId)
+
+    if (isLiked) {
+      // User has already liked the post, so remove their like
       await Post.findOneAndUpdate(
         { _id: req.params.id },
         {
+          $pull: { likedBy: userId },
+          $inc: { likes: -1 },
+        }
+      )
+    } else {
+      // User has not yet liked the post, so add their like
+      await Post.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          $addToSet: { likedBy: userId },
           $inc: { likes: 1 },
         }
       )
-      console.log("Likes +1")
-      res.redirect(`/post/${req.params.id}`)
-    } catch (err) {
-      console.log(err)
     }
-  },
+
+    res.redirect(`/post/${req.params.id}`)
+  } catch (err) {
+    console.log(err)
+  }
+},
+
+
+
+
   deletePost: async (req, res) => {
     try {
       // Find post by id
