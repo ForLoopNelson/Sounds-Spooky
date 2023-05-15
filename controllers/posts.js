@@ -84,7 +84,7 @@ module.exports = {
   likePost: async (req, res) => {
   try {
     const post = await Post.findOne({ _id: req.params.id }).select("likedBy")
-    console.log(post.likedBy)
+    
     if (!post) {
       return res.status(404).send("Post not found")
     }
