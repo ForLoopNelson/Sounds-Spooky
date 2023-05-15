@@ -26,6 +26,18 @@ h1 {
   filter: drop-shadow(1px 3px #00bc8c);
 }
 
+#index-page {
+  background: url(../imgs/doorbg.jpg) no-repeat;
+  background-size:cover;
+  background-position: 10% 31%;  
+}
+#feed-page {
+  background: url(../imgs/treesbg.jpg) no-repeat;
+  background-size:cover;
+  background-position: 10% 21%;  
+  opacity: .9;
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -58,7 +70,7 @@ footer {
 
 .box-bg {
   border: 1px ridge #29a19c;
-  background:#393e46;
+  background:#212121;
   margin-right:  290px;
   padding: 20px 10px;
   
@@ -66,7 +78,7 @@ footer {
 
 .desc-box {
   border: 1px ridge #00bc8c;
-  
+  background:#212121;
   padding: 20px 0 0 40px;
   min-height: 200px;
   
