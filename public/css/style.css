@@ -58,9 +58,18 @@ footer {
 
 .box-bg {
   border: 1px ridge #29a19c;
-  background:#083d56;
+  background:#393e46;
   margin-right:  290px;
   padding: 20px 10px;
+  
+}
+
+.desc-box {
+  border: 1px ridge #00bc8c;
+  
+  padding: 20px 0 0 40px;
+  min-height: 200px;
+  
   
 }
 
