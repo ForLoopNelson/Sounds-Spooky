@@ -35,13 +35,22 @@
           </p>
         </div>
         <h2 class="add-pad">Add a comment</h2>
-        <form action="/comment/createComment/<%=post._id%>" method="POST">
-          <div class="mb-3">
-            <label for="comment" class="form-label">Comment</label>
-            <input type="text" class="form-control" id="comment" name="comment" maxlength="300" spellcheck="true">
+        <!-- Error if comment field blank WIP -->
+        <% if (messages && messages.error && messages.error.length> 0) { %>
+          <div class="alert alert-danger" role="alert">
+            <% messages.error.forEach(function(message) { %>
+              <%= message %><br>
+                <% }); %>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+          <% } %>
+            <!-- TODO fix above -->
+            <form action="/comment/createComment/<%=post._id%>" method="POST">
+              <div class="mb-3">
+                <label for="comment" class="form-label">Comment</label>
+                <input type="text" class="form-control" id="comment" name="comment" maxlength="300" spellcheck="true">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
       </div>
       <ul>
         <% for(var i=0; i<comments.length; i++) {%>
