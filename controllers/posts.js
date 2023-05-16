@@ -33,6 +33,13 @@ module.exports = {
   },
   createPost: async (req, res) => {
     try {
+       // Check for required fields
+    if (!req.body.title || !req.body.caption || !req.file) {
+      req.flash("error", "Please fill in all required fields.");
+      return res.redirect("/profile");
+    }
+      
+
       // Upload audio to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path, {resource_type: "video", folder: "audio_files/"})
 
@@ -67,20 +74,7 @@ module.exports = {
       console.log(err)
     }
   },
-  // likePost: async (req, res) => {
-  //   try {
-  //     await Post.findOneAndUpdate(
-  //       { _id: req.params.id },
-  //       {
-  //         $inc: { likes: 1 },
-  //       }
-  //     )
-  //     console.log("Likes +1")
-  //     res.redirect(`/post/${req.params.id}`)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // },
+ 
   likePost: async (req, res) => {
   try {
     const post = await Post.findOne({ _id: req.params.id }).select("likedBy")
