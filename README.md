@@ -29,9 +29,9 @@
 # TODO's
 
 `Create a forgot password, reset password feature`
-` Prompt user if file type is not supported`
+`Prompt user if file type is not supported`
 `User Profile Picture`
 `Have feed show posts from mutual Users (followers)`
-`Get Categories to work`
 `Set 30 second limit for audio files`
 `Setup another way to login, like Google or github`
+`Get design cleaned up and background images positioned better`
