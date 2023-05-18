@@ -5,11 +5,11 @@
 
     <div class="container">
       <div class="row justify-content-center mt-5">
-        <div class="col-6 box-bg">
+        <div class=" col-5 mt-3 box-bg">
           <h2>
             <%= post.title %>
           </h2>
-          <!-- <img class="img-fluid" src="<%= post.audio%>" /> -->
+
           <audio controls>
             <source src="<%= post.audio%>" type="">
           </audio>
@@ -28,7 +28,7 @@
               <%}%>
           </div>
         </div>
-        <div class="col-3 mt-5 desc-box">
+        <div class=" col-5 mt-3 desc-box">
           <h3>Description</h3>
           <p class="add-pad">
             <%= post.caption %>
