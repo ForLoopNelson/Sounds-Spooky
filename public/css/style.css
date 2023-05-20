@@ -80,7 +80,7 @@ footer {
   border: 1px ridge #29a19c;
   background:#212121;
   padding-right: 10px;
-  margin-right: 20px;
+  margin-right: 160px;
    
 
   
@@ -91,7 +91,7 @@ footer {
   background:#212121;
   padding: 20px 0 0 40px;
   min-height: 200px;
-  margin-left: 15px;
+  margin-right: 35px;
   
   
 }
@@ -105,12 +105,5 @@ footer {
 
 
 
-/* h1,
-.text-center {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    rgba(16, 84, 221, 1) 35%,
-    rgba(234, 242, 244, 1) 100%
-  );
-} */
+
 
