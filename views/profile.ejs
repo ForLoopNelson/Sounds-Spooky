@@ -58,14 +58,14 @@
 
 
 
-                <h3>
+                <h3 id="post-title">
                   <%= posts[i].title %>
                 </h3>
                 <p><strong>Category</strong>: <% if (posts[i].category) { %>
                     <%= posts[i].category.category %>
                       <% } %>
                 </p>
-                <button data-playing="false" role="switch" aria-checked="false">
+                <button id="view-sound" data-playing="false" role="switch" aria-checked="false">
 
                   Click to View
                 </button>
