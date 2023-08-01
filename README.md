@@ -35,3 +35,4 @@
 `Set 30 second limit for audio files`
 `Setup another way to login, like Google or github`
 `Get design cleaned up and background images positioned better`
+`Make design changes for mobile views`
