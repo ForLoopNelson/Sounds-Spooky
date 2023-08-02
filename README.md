@@ -36,3 +36,4 @@
 `Setup another way to login, like Google or github`
 `Get design cleaned up and background images positioned better`
 `Make design changes for mobile views`
+`If user is still "signed in" on browser, the sign up button takes them to profile. not what it should do`
