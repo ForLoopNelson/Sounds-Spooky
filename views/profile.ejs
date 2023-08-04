@@ -62,8 +62,10 @@
                   <%= posts[i].title %>
                 </h3>
                 <p><strong>Category</strong>: <% if (posts[i].category) { %>
-                    <%= posts[i].category.category %>
-                      <% } %>
+                    <span class="category-text">
+                      <%= posts[i].category.category %>
+                    </span>
+                    <% } %>
                 </p>
                 <button id="view-sound" data-playing="false" role="switch" aria-checked="false">
 
