@@ -1,12 +1,14 @@
-/* .btn {
-  background: #1054dd;
-} */
+
 html {
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+}
+
+p {
+  padding-top: 10px;
 }
 
 h1 {
@@ -17,7 +19,8 @@ h1 {
 
 .add-post {
   text-decoration: underline #00bc8c;
-  padding-bottom: 18px;
+  text-underline-offset: 10px;
+  padding-bottom: 32px;
 }
 
 #main-img {
@@ -75,7 +78,19 @@ footer {
 }
 
 #post-title {
-  border-bottom: #00bc8c;
+  display: inline;
+ padding: 7px 12px;
+ font-family: 'creepster';
+ font-weight: 100;
+ border:  1px solid #29a19c;
+ 
+ 
+}
+
+.category-text {
+  color: #73e6e6;
+  font-weight: bolder;
+
 }
 
 
