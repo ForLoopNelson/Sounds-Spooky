@@ -5,7 +5,7 @@ module.exports = {
     try {
           // Check for required fields
     if (!req.body.comment) {
-      req.flash("Comment cannot be blank.");
+      req.flash("error", "Comment cannot be blank.");
       return res.redirect(`/post/${req.params.id}`);
     }
 
