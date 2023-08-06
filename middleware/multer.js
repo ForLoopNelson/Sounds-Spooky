@@ -10,7 +10,8 @@ module.exports = multer({
     //   return
     // }
     if (ext !== ".mp3" && ext !== ".wav" && ext !== ".AAC" && ext !== ".AIFF") {
-      cb(new Error("File type is not supported!"), false)
+      req.flash('error','File type is not supported!')
+      cb(null, false)
       return
     }
     cb(null, true)
