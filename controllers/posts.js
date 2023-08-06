@@ -33,10 +33,26 @@ module.exports = {
   },
   createPost: async (req, res) => {
     try {
-       // Check for required fields
+
+       // If it's a GET request, render the form page
+    if (req.method === 'GET') {
+      return res.render('index', {
+        errorMessages: req.flash('error'),
+        title: req.body.title || '',
+        caption: req.body.caption || '',
+      });
+    }
+      
+      // Check for required fields
     if (!req.body.title || !req.body.caption || !req.file) {
       req.flash("error", "Please fill in all required fields.");
       return res.redirect(`/profile`);
+    }
+
+          // Check if file selected to upload
+    if (!req.file) {
+      req.flash('error', 'Please upload a file.');
+      return res.redirect('/profile');
     }
       
 
@@ -72,6 +88,7 @@ module.exports = {
       res.redirect("/profile")
     } catch (err) {
       console.log(err)
+      
     }
   },
  
