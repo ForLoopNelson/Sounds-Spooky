@@ -3,6 +3,12 @@ html {
   scroll-behavior: smooth;
 }
 
+audio {
+  border: 5px solid #00bc8c;
+  border-radius: 40px;
+  
+}
+
 a {
   text-decoration: none;
 }
@@ -81,7 +87,8 @@ footer {
   display: inline;
  padding: 7px 12px;
  font-family: 'creepster';
- font-weight: 100;
+ font-size: 1.7em;
+ font-style: oblique;
  border:  1px solid #29a19c;
  
  
