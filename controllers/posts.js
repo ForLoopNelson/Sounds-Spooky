@@ -136,6 +136,13 @@ module.exports = {
     try {
       // Find post by id
       let post = await Post.findById({ _id: req.params.id })
+
+       // Check if the post exists
+      if (!post) {
+        return res.redirect("/profile");
+      }
+
+    
       // Delete image from cloudinary
       await cloudinary.uploader.destroy(post.cloudinaryId)
       // Delete post from db
