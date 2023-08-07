@@ -23,7 +23,7 @@
             </h3>
             <%if(post.user==user.id){ %>
               <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3" id="trash">
-                <button class="btn btn-primary fa fa-trash" type="submit"></button>
+                <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirmDelete()"></button>
               </form>
               <%}%>
           </div>
@@ -76,6 +76,11 @@
       </div>
     </div>
     </div>
+    <script>
+      function confirmDelete() {
+        return confirm("Are you sure you want to delete this post?")
+      }
+    </script>
   </body>
 
   <%- include('partials/footer') -%>
