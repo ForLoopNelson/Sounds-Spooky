@@ -139,6 +139,14 @@ footer {
   footer {
     padding-top: 250px;
   }
+
+  /* fix mobile view for feed page!!!! */
+  /* .mobile-feed {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 3fr) ;
+   
+  } */
 }
 
 @media screen and (max-width: 420px) {
