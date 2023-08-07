@@ -18,4 +18,6 @@ router.put("/likePost/:id", postsController.likePost)
 //delete a post the user has created
 router.delete("/deletePost/:id", postsController.deletePost)
 
+
+
 module.exports = router
