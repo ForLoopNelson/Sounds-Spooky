@@ -45,7 +45,7 @@ module.exports = {
       
       // Check for required fields
     if (!req.body.title || !req.body.caption || !req.file) {
-      req.flash("error", "Please fill in all required fields.");
+      req.flash("error", "Please fill in all fields.");
       return res.redirect(`/profile`);
     }
 
