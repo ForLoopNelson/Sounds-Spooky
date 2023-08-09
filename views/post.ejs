@@ -35,12 +35,14 @@
           </p>
         </div>
         <h2 class="add-pad">Add a comment</h2>
-        <!-- TODO update styling on error message -->
+
         <% if (messages && messages.error && messages.error.length> 0) { %>
           <div class="alert alert-danger err-sizing" role="alert">
             <% messages.error.forEach(function(message) { %>
               <%= message %><br>
                 <% }); %>
+                  <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
           </div>
           <% } %>
             <!-- TODO fix above -->
