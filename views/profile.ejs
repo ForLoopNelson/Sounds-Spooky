@@ -24,7 +24,7 @@
             <% } %>
               <form action="/post/createPost" enctype="multipart/form-data" method="POST">
                 <div class="mb-3">
-                  <label for="title" class="form-label">Sound Category:&nbsp;</label>
+                  <label for="title" class="form-label sound-choice">Sound Category:&nbsp;</label>
 
                   <select id="audio" name="category">
                     <option value="background" selected>background</option>
@@ -39,7 +39,8 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="caption" class="form-label">Caption- Brief description of the sound</label>
+                  <label for="caption" class="form-label">Caption: Brief description of the sound. (Max: 300
+                    characters)</label>
                   <textarea class="form-control" id="caption" name="caption" spellcheck="true"
                     maxlength="300"></textarea>
                 </div>
