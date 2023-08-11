@@ -1,6 +1,7 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
 
 audio {
@@ -26,6 +27,10 @@ h1 {
   font-family: 'Creepster', 'Roboto', sans-serif;
   font-size: 5em;
   text-shadow: 0 0 7px #73e6e6;
+}
+
+.btn {
+  cursor: url(../imgs/noun-bones-2008829.png), crosshair !important;
 }
 
 .add-post {
