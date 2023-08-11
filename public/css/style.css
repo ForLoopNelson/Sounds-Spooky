@@ -11,6 +11,11 @@ audio {
 
 a {
   text-decoration: none;
+  
+}
+
+a:hover {
+  color: #00bc8c;
 }
 
 p {
@@ -28,6 +33,13 @@ h1 {
   text-underline-offset: 10px;
   padding-bottom: 32px;
 }
+
+#your-sfx {
+  padding: 20px 0 10px 170px;
+  border-bottom: 3px solid #00bc8c;
+}
+
+
 
 #main-img {
   width: 7%;
@@ -125,18 +137,16 @@ footer {
 
 #post-title {
   display: inline;
- padding: 7px 12px;
+ 
  font-family: 'creepster';
  font-size: 1.7em;
  font-style: oblique;
- border:  1px solid #29a19c;
- 
- 
 }
 
 .category-text {
   color: #73e6e6;
   font-weight: bolder;
+ 
 
 }
 
