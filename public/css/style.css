@@ -12,6 +12,7 @@ audio {
 
 a {
   text-decoration: none;
+  cursor:url(../imgs/hand-bones-icon.png), pointer;
   
 }
 
@@ -30,7 +31,7 @@ h1 {
 }
 
 .btn {
-  cursor: url(../imgs/icons8-spooky-64.png), crosshair !important;
+  cursor: url(../imgs/icons8-white-edit.png), crosshair !important;
 }
 
 .add-post {
