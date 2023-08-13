@@ -35,5 +35,5 @@
 `Setup another way to login, like Google or github`
 `Make design changes for mobile views`
 `If user is still "signed in" on browser, the sign up button takes them to profile. not what it should do`
-`Adjust size and color of custom cursors`
+
 
