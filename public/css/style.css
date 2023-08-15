@@ -12,7 +12,7 @@ audio {
 
 a {
   text-decoration: none;
-  cursor:url(../imgs/ghost-edit.png), pointer;
+  cursor:url(../imgs/ghost-icon-34.png), pointer;
   
 }
 
@@ -33,6 +33,8 @@ h1 {
 .btn {
   cursor: url(../imgs/icons8-white-edit.png), pointer !important;
 }
+
+
 
 .add-post {
   text-decoration: underline #00bc8c;
@@ -197,6 +199,11 @@ footer {
     background-size: cover;
 
   
+  }
+
+  #your-sfx {
+    font-size: 2em;
+    padding: 0 0 15px 0
   }
 
   footer {
