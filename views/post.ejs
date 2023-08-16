@@ -5,7 +5,7 @@
 
     <div class="container">
       <div class="row justify-content-center mt-5">
-        <div class=" col-5 mt-3 box-bg">
+        <div class=" col-md-5 mt-3 box-bg">
           <h2>
             <%= post.title %>
           </h2>
@@ -28,7 +28,7 @@
               <%}%>
           </div>
         </div>
-        <div class=" col-5 mt-3 desc-box">
+        <div class=" col-md-5 mt-3 desc-box">
           <h3>Description</h3>
           <p class="add-pad">
             <%= post.caption %>
@@ -56,7 +56,7 @@
       </div>
       <ul>
         <% for(var i=0; i<comments.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
+          <li class="col-md-6 justify-content-between mt-5">
             User <strong>
               <%= comments[i].createdBy%>
             </strong> says : <br>
@@ -72,7 +72,7 @@
 
           <% } %>
       </ul>
-      <div class="col-6 mt-5">
+      <div class="col-md-6 mt-5">
         <a class="btn btn-primary" href="/profile">Return to Profile</a>
         <a class="btn btn-primary" href="/feed">Return to Feed</a>
       </div>
