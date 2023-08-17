@@ -206,7 +206,30 @@ footer {
     padding: 0 0 15px 0
   }
 
+  .box-bg {
+    max-width: 100%;
+    margin-right:  40px;
+    /* padding-right: 20px; */
+    
+  }
 
+  .desc-box {
+    padding-left: 10px;
+  }
+
+  .fa-trash {
+    position: relative;
+    left: 130px;
+  }
+
+  .likes {
+    font-size: 1.6em;
+    padding-left: 30px;
+  }
+
+  audio {
+    width: 100%;
+  }
 
   footer {
     padding-top: 250px;
@@ -232,6 +255,11 @@ footer {
 
     #your-sfx {
       padding-top: 1em;
+    }
+
+    .box-bg, .desc-box {
+      padding-left: 20px;
+      margin-left: 39px;
     }
 
     footer {
