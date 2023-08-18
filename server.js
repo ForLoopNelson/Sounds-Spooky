@@ -1,7 +1,6 @@
 // Declare all needed variables for packages
 
 const express = require("express")
-const app = express()
 const mongoose = require("mongoose")
 const passport = require("passport")
 const session = require("express-session")
@@ -23,6 +22,7 @@ require("./config/passport")(passport)
 
 //Connect To Database
 // connectDB()
+const app = express()
 
 //Using EJS for views
 app.set("view engine", "ejs")
