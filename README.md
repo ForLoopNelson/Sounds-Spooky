@@ -25,6 +25,9 @@
 # Run
 
 `npm start`
+-- Or to run in Development mode: `npm run dev`
+
+--Production: `node server.js`
 
 # TODO's
 
@@ -34,7 +37,7 @@
 `Set 30 second limit for audio files`
 `Confirm deleting post removes the audio from Cloudinary`
 `Setup another way to login, like Google or github`
-`Mobile views complete! expect for post page.`
 `If user is still "signed in" on browser, the sign up button takes them to profile. not what it should do`
+`Look into why only profile page of logged in user is "secure(https)" on cyclic deploy`
 
 
