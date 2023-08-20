@@ -248,9 +248,24 @@ footer {
     height: 40vh;
     }
 
+    .btn-primary {
+      width: 40%;
+    }
+
+     .login-box {
+      width: 130%;
+     }
+
     .signup-form {
       width: 40rem;
       padding-right: 200px;
+    }
+
+    
+
+    #logo {
+      width: 40%;
+      border: 1px solid red;
     }
 
     #your-sfx {
@@ -260,6 +275,11 @@ footer {
     .box-bg, .desc-box {
       padding-left: 20px;
       margin-left: 39px;
+    }
+
+    .fa-heart, .fa-trash {
+      width: 60%;
+      
     }
 
     footer {
