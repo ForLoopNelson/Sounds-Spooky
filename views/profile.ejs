@@ -23,15 +23,19 @@
             </div>
             <% } %>
               <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-                <div class="mb-3">
+                <div class="mb-md-3">
                   <label for="title" class="form-label sound-choice">Sound Category:&nbsp;</label>
 
-                  <select id="audio" name="category">
+                  <select id="audio-category" name="category">
                     <option value="background" selected>background</option>
                     <option value="Creature Sounds">Creature Sounds</option>
                     <option value="Ambient">Ambient</option>
                     <option value="Other SFX">Other SFX</option>
                   </select>
+                  <select name="shared" id="shared">
+                    <option value="private" selected>Private</option>
+                    <option value="public">Public</option>
+                  </select>&nbsp;&nbsp;
                 </div>
                 <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
