@@ -30,7 +30,7 @@
 --Production: `node server.js`
 
 # TODO's
-
+`UP NEXT: Add public of shared option for user to share sfx with other users. Kind of like followers, but not that, just yet`
 `Create a forgot password, reset password feature`
 `User Profile Picture`
 `Have feed show posts from mutual Users (followers)`
