@@ -279,6 +279,11 @@ footer {
       width: 40%;
     }
 
+    .profile-btn {
+      margin-bottom: 65px;
+      
+    }
+
      .login-box {
       width: 130%;
      }
@@ -309,8 +314,22 @@ footer {
       margin-left: 39px;
     }
 
-    .fa-heart, .fa-trash {
+    .fa-trash {
       width: 60%;
+      padding-right: 20px;
+     
+      
+    }
+
+    .fa-heart {
+      padding-left: 30px;
+      font-size: larger;
+      
+    }
+
+    .fa-heart::before {
+      position: relative;
+      right: 19px;
       
     }
 
