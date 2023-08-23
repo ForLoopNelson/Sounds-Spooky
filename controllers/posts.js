@@ -63,7 +63,8 @@ module.exports = {
     // Generate a new URL for the audio asset with the "auto" parameter
     const audioUrl = cloudinary.url(result.public_id, {
       resource_type: 'video',
-      quality: 'auto'
+      quality: 'auto',
+      secure: true
     });
     
 
