@@ -38,6 +38,6 @@
 `Confirm deleting post removes the audio from Cloudinary`
 `Setup another way to login, like Google or github`
 `If user is still "signed in" on browser, the sign up button takes them to profile. not what it should do`
-`Look into why only profile page of logged in user is "secure(https)" on cyclic deploy`
+
 
 
