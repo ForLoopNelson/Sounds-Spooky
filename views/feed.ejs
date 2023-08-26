@@ -50,7 +50,7 @@
                 <p><strong>Created By:</strong>
                   <%= sharedPosts[i].user.userName %>
                 </p>
-                <audio controls>
+                <audio controls class="audio-element">
                   <source src="<%= sharedPosts[i].audio %>" type="">
                 </audio>
               </li>
@@ -62,5 +62,6 @@
         </div>
       </div>
     </div>
+    <script src="/js/audio.js"></script>
   </body>
   <!-- <%- include('partials/footer') -%> -->
