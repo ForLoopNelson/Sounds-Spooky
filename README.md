@@ -30,12 +30,12 @@
 --Production: `node server.js`
 
 # TODO's
-`UP NEXT: Add public of shared option for user to share sfx with other users. Kind of like followers, but not that, just yet`
+
 `Create a forgot password, reset password feature`
 `User Profile Picture`
 `Have feed show posts from mutual Users (followers)`
 `Set 30 second limit for audio files`
-`Confirm deleting post removes the audio from Cloudinary`
+
 `Setup another way to login, like Google or github`
 `If user is still "signed in" on browser, the sign up button takes them to profile. not what it should do`
 
