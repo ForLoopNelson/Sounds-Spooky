@@ -65,23 +65,18 @@
           <% for(var i=0; i<posts.length; i++) {%>
             <li class="col-6 justify-content-between mt-5">
               <a href="/post/<%= posts[i]._id%>">
-
-
-
-
                 <h3 id="post-title">
                   <%= posts[i].title %>
                 </h3>
                 <p><strong>Category</strong>: <% if (posts[i].category) { %>
                     <span class="category-text">
                       <%= posts[i].category.category %>
+                        <p class="category-text">Status: <%= posts[i].shared %>
+                        </p>
+
                     </span>
                     <% } %>
                 </p>
-                <!-- <button id="view-sound" data-playing="false" role="switch" aria-checked="false">
-
-                  Click to View
-                </button> -->
 
               </a>
             </li>
