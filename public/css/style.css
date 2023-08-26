@@ -98,6 +98,24 @@ footer {
   font-size: 20px;
 }
 
+.share-feed {
+  border-bottom: 3px solid #00bc8c;
+  padding: 10px 0;
+  
+}
+
+.pr-5 {
+  padding-left: 40px;
+}
+
+.shared-posts audio {
+  border: 5px solid #73e6e6;
+  border-radius: 40px;
+}
+.glow-share{
+  text-shadow: 0 10px 22px #73e6e6;
+}
+
 #shared {
   background: #212121;
  color: #29a19c;

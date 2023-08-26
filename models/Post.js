@@ -31,6 +31,13 @@ const PostSchema = new mongoose.Schema({
     },
   ],
 
+    shared: {
+      type: String,
+      default: "private",
+      enum: ["public", "private"],
+      required: true,
+    },
+
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",

@@ -12,14 +12,28 @@ module.exports = {
       console.log(err)
     }
   },
-  getFeed: async (req, res) => {
-    try {
-      const posts = await Post.find({ user: req.user.id }).sort({ createdAt: "desc" }).populate("category").populate("user").lean()
-      res.render("feed.ejs", { posts: posts})
-    } catch (err) {
-      console.log(err)
-    }
-  },
+  // getFeed: async (req, res) => {
+  //   try {
+  //     const posts = await Post.find({ $or: [ {user: req.user.id}, {user:{ $ne: req.user.id},shared: 'public'} ] }).sort({ createdAt: "desc" }).populate("category").populate("user").lean()
+  //     res.render("feed.ejs", { posts: posts})
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // },
+   getFeed: async (req, res) => {
+  try {
+    const allPosts = await Post.find().sort({ createdAt: 'desc' }).populate('category').populate('user').lean();
+    
+    const yourPosts = allPosts.filter(post => post.user._id.toString() === req.user.id);
+    const sharedPosts = allPosts.filter(post => post.user._id.toString() !== req.user.id && post.shared === 'public');
+
+    res.render('feed.ejs', { yourPosts: yourPosts, sharedPosts: sharedPosts });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Internal Server Error');
+  }
+},
+
   getPost: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id)
@@ -83,7 +97,8 @@ module.exports = {
         caption: req.body.caption,
         likes: 0,
         user: req.user.id,
-        category: category._id
+        category: category._id,
+        shared: req.body.shared
       })
       console.log("Post has been added!")
       res.redirect("/profile")
@@ -144,10 +159,10 @@ module.exports = {
       }
 
     
-      // Delete image from cloudinary
-      await cloudinary.uploader.destroy(post.cloudinaryId)
+      // Delete audio from cloudinary
+      await cloudinary.uploader.destroy(post.cloudinaryId, {resource_type: "video", folder: "audio_files/"})
       // Delete post from db
-      await Post.remove({ _id: req.params.id })
+      await Post.deleteOne({ _id: req.params.id })
       console.log("Deleted Post")
       res.redirect("/profile")
     } catch (err) {
