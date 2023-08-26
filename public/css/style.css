@@ -187,6 +187,19 @@ footer {
   
 }
 
+.custom-link {
+  text-align: center;
+  
+}
+
+.btn-link {
+  text-decoration: none;
+}
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+
 
 .box-bg {
   border: 1px ridge #29a19c;
