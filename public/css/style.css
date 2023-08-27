@@ -350,6 +350,10 @@ footer {
     
   }
 
+  #comment {
+    width: 80%;
+  }
+
     .box-bg, .desc-box {
       padding-left: 20px;
       margin-left: 39px;
