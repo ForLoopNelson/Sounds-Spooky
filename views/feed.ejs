@@ -38,8 +38,9 @@
           <ul class="row list-unstyled">
             <% for (var i=0; i < sharedPosts.length; i++) { %>
               <li class="col-md-6 justify-content-between mt-5 shared-posts">
-                <!-- Display shared post content here -->
+
                 <!-- You can access shared post data using <%= sharedPosts[i].property %> -->
+
                 <h3 class="glow-text glow-share">
                   <%= sharedPosts[i].title %>
                 </h3>
@@ -47,6 +48,7 @@
                     <%= sharedPosts[i].category.category %>
                       <% } %>
                 </p>
+                <p><a href="/post/<%= sharedPosts[i]._id%>">See More...</p></a>
                 <p><strong>Created By:</strong>
                   <%= sharedPosts[i].user.userName %>
                 </p>
