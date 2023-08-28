@@ -33,10 +33,8 @@
 
 `Create a forgot password, reset password feature`
 `User Profile Picture`
-`Have feed show posts from mutual Users (followers)`
-`Set 30 second limit for audio files`
-`Remove audio-elements class from audio tag, once I confirm it's no longer needed`
-
+`Have feed show posts from mutual Users (followers) -- This is kind of done. If a user selects their post to be public, others can see it and like and comment and listen--`
+`Set 30 second limit for audio files --getting audio files ready for testing!`
 `Setup another way to login, like Google or github`
 `If user is still "signed in" on browser, the sign up button takes them to profile. not what it should do`
 
