@@ -48,11 +48,11 @@
                     <%= sharedPosts[i].category.category %>
                       <% } %>
                 </p>
-                <p><a href="/post/<%= sharedPosts[i]._id%>">See More...</p></a>
+                <p><a href="/post/<%= sharedPosts[i]._id%>" class="btn btn-dark">See More...</p></a>
                 <p><strong>Created By:</strong>
                   <%= sharedPosts[i].user.userName %>
                 </p>
-                <audio controls class="audio-element">
+                <audio controls>
                   <source src="<%= sharedPosts[i].audio %>" type="">
                 </audio>
               </li>
