@@ -19,6 +19,10 @@
   - CLOUD_NAME = `your cloudinary cloud name`
   - API_KEY = `your cloudinary api key`
   - API_SECRET = `your cloudinary api secret`
+--FOR GOOGLE AUTH:
+  - GOOGLE_CLIENT_ID = `your google client id`
+  - GOOGLE_CLIENT_SECRET = `your google client secret`
+  
 
 ---
 
