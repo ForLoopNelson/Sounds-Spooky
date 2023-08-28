@@ -12,6 +12,7 @@ const connectDB = require("./config/database")
 const mainRoutes = require("./routes/main")
 const postRoutes = require("./routes/posts")
 const commentRoutes = require("./routes/comment")
+const authRoutes = require("./routes/auth")
 
 
 //Use .env file in config folder
@@ -63,6 +64,7 @@ app.use(flash())
 app.use("/", mainRoutes)
 app.use("/post", postRoutes)
 app.use("/comment", commentRoutes)
+app.use('/auth', authRoutes)
 
 //Server Running
 const PORT = process.env.PORT || 3000
