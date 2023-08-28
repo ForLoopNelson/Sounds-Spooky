@@ -44,6 +44,14 @@ exports.postLogin = (req, res, next) => {
   })(req, res, next)
 }
 
+// PW reset start ++++++++++++++++++++++++++++++++++++++++
+exports.renderResetPasswordForm = (req, res) => {
+  res.render("reset-password", {
+    title: "Reset Password",
+  });
+};
+// WIP +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 exports.logout = (req, res) => {
   req.logout(() => {
     console.log("User has logged out.")
