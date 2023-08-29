@@ -286,7 +286,8 @@ footer {
     font-size: 1.6em;
     padding-left: 30px;
   }
-
+  
+  
   audio {
     width: 100%;
   }
@@ -312,12 +313,22 @@ footer {
       width: 15%;
     }
 
+    #tagline {
+      font-size: 10px;
+      
+    }
+
     .btn-primary {
       width: 60%;
     }
 
     .google {
       width: 60%;
+      font-size: 12px;
+    }
+
+    .wip {
+      font-size: 15px;
     }
 
     .profile-btn {
@@ -332,6 +343,10 @@ footer {
     .signup-form {
       width: 40rem;
       padding-right: 200px;
+    }
+
+    .share-feed {
+      padding-top: 50px;
     }
 
     
