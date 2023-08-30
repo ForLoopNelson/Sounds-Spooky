@@ -6,7 +6,9 @@
     <div class="container">
       <div class="row justify-content-center mt-md-5">
         <div class="col-md-6">
-          <h2 class="share-feed">Your Sounds</h2>
+          <a href="#scrollToShared"><button class="row  mt-5 d-md-none btn btn-primary">Scroll to Shared
+              Posts</button></a>
+          <h2 id="scrollBack" class="share-feed">Your Sounds </h2>
           <ul class="row list-unstyled mobile-feed">
             <% for(var i=0; i<yourPosts.length; i++) {%>
               <li class="col-md-6 justify-content-between mt-5">
@@ -34,7 +36,9 @@
         </div>
         <!-- Display shared posts -->
         <div class="col-md-6 pr-5">
-          <h2 class="share-feed">Shared Posts</h2>
+          <h2 id="scrollToShared" class="share-feed">Shared Posts</h2>
+          <a href="#scrollBack"><button class="row  mt-5 d-md-none btn btn-primary">Back to my Sounds
+            </button></a>
           <ul class="row list-unstyled">
             <% for (var i=0; i < sharedPosts.length; i++) { %>
               <li class="col-md-6 justify-content-between mt-5 shared-posts">
@@ -65,5 +69,37 @@
       </div>
     </div>
     <script src="/js/audio.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var scrollToSharedPostsBtn = document.querySelector("#scrollToShared")
+        scrollToSharedPostsBtn.addEventListener("click", function (event) {
+          event.preventDefault()
+          var sharedPostsSection = document.querySelector(".share-feed:contains('Shared Posts')")
+          var sharedPostsSectionTop = sharedPostsSection.getBoundingClientRect().top + window.scrollY
+
+          // Smooth scroll to the shared posts section
+          window.scrollTo({
+            top: sharedPostsSectionTop,
+            behavior: "smooth",
+          })
+        })
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var scrollToSharedPostsBtn = document.querySelector("#scrollBack")
+        scrollToSharedPostsBtn.addEventListener("click", function (event) {
+          event.preventDefault()
+          var sharedPostsSection = document.querySelector(".share-feed:contains('Your Posts')")
+          var sharedPostsSectionTop = sharedPostsSection.getBoundingClientRect().top + window.scrollY
+
+          // Smooth scroll to the shared posts section
+          window.scrollTo({
+            top: sharedPostsSectionTop,
+            behavior: "smooth",
+          })
+        })
+      });
+    </script>
   </body>
   <!-- <%- include('partials/footer') -%> -->
