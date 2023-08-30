@@ -3,6 +3,8 @@ const Post = require("../models/Post")
 const Comment = require("../models/comment")
 const Category = require("../models/Category")
 
+
+
 module.exports = {
   getProfile: async (req, res) => {
     try {
@@ -12,14 +14,7 @@ module.exports = {
       console.log(err)
     }
   },
-  // getFeed: async (req, res) => {
-  //   try {
-  //     const posts = await Post.find({ $or: [ {user: req.user.id}, {user:{ $ne: req.user.id},shared: 'public'} ] }).sort({ createdAt: "desc" }).populate("category").populate("user").lean()
-  //     res.render("feed.ejs", { posts: posts})
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // },
+ 
    getFeed: async (req, res) => {
   try {
     const allPosts = await Post.find().sort({ createdAt: 'desc' }).populate('category').populate('user').lean();
@@ -67,7 +62,16 @@ module.exports = {
     if (!req.file) {
       req.flash('error', 'Please upload a file.');
       return res.redirect('/profile');
+      
     }
+
+
+      // Check file size
+    const maxSize = 10 * 1024 * 1024; 
+      if (req.file.size > maxSize) {
+      req.flash("error", "File size exceeds the limit of 10MB!");
+      return res.redirect("/profile");
+   }
       
 
       // Upload audio to cloudinary
@@ -101,6 +105,7 @@ module.exports = {
         shared: req.body.shared
       })
       console.log("Post has been added!")
+      req.flash("success", "Audio file uploaded successfully!")
       res.redirect("/profile")
     } catch (err) {
       console.log(err)
