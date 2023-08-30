@@ -69,37 +69,6 @@
       </div>
     </div>
     <script src="/js/audio.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var scrollToSharedPostsBtn = document.querySelector("#scrollToShared")
-        scrollToSharedPostsBtn.addEventListener("click", function (event) {
-          event.preventDefault()
-          var sharedPostsSection = document.querySelector(".share-feed:contains('Shared Posts')")
-          var sharedPostsSectionTop = sharedPostsSection.getBoundingClientRect().top + window.scrollY
-
-          // Smooth scroll to the shared posts section
-          window.scrollTo({
-            top: sharedPostsSectionTop,
-            behavior: "smooth",
-          })
-        })
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var scrollToSharedPostsBtn = document.querySelector("#scrollBack")
-        scrollToSharedPostsBtn.addEventListener("click", function (event) {
-          event.preventDefault()
-          var sharedPostsSection = document.querySelector(".share-feed:contains('Your Posts')")
-          var sharedPostsSectionTop = sharedPostsSection.getBoundingClientRect().top + window.scrollY
-
-          // Smooth scroll to the shared posts section
-          window.scrollTo({
-            top: sharedPostsSectionTop,
-            behavior: "smooth",
-          })
-        })
-      });
-    </script>
+    <script src="/js/post-scroll.js"></script>
   </body>
   <!-- <%- include('partials/footer') -%> -->
