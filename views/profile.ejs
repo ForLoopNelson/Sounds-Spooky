@@ -22,41 +22,50 @@
                       aria-label="Close"></button>
             </div>
             <% } %>
-              <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-                <div class="mb-md-3">
-                  <label for="title" class="form-label sound-choice">Sound Category:&nbsp;</label>
+              <% if (messages && messages.success && messages.success.length> 0) { %>
+                <div class="alert alert-success" role="alert">
+                  <% messages.success.forEach(function(message) { %>
+                    <%= message %><br>
+                      <% }); %>
+                        <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="alert"
+                          aria-label="Close"></button>
+                </div>
+                <% } %>
+                  <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+                    <div class="mb-md-3">
+                      <label for="title" class="form-label sound-choice">Sound Category:&nbsp;</label>
 
-                  <select id="audio-category" name="category">
-                    <option value="background" selected>background</option>
-                    <option value="Creature Sounds">Creature Sounds</option>
-                    <option value="Ambient">Ambient</option>
-                    <option value="Other SFX">Other SFX</option>
-                  </select>
-                  <select name="shared" id="shared">
-                    <option value="private" selected>Private</option>
-                    <option value="public">Public</option>
-                  </select>&nbsp;&nbsp;
-                </div>
-                <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title" spellcheck="true">
-                </div>
+                      <select id="audio-category" name="category">
+                        <option value="background" selected>background</option>
+                        <option value="Creature Sounds">Creature Sounds</option>
+                        <option value="Ambient">Ambient</option>
+                        <option value="Other SFX">Other SFX</option>
+                      </select>
+                      <select name="shared" id="shared">
+                        <option value="private" selected>Private</option>
+                        <option value="public">Public</option>
+                      </select>&nbsp;&nbsp;
+                    </div>
+                    <div class="mb-3">
+                      <label for="title" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="title" name="title" spellcheck="true">
+                    </div>
 
-                <div class="mb-3">
-                  <label for="caption" class="form-label">Caption: Brief description of the sound. (Max: 300
-                    characters)</label>
-                  <textarea class="form-control" id="caption" name="caption" spellcheck="true"
-                    maxlength="300"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="imgUpload" class="form-label">Select audio file to upload: (.wav .mp3 .aac ) Max file
-                    size:
-                    10MB
-                  </label>
-                  <input type="file" class="form-control" id="imageUpload" name="file">
-                </div>
-                <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-              </form>
+                    <div class="mb-3">
+                      <label for="caption" class="form-label">Caption: Brief description of the sound. (Max: 300
+                        characters)</label>
+                      <textarea class="form-control" id="caption" name="caption" spellcheck="true"
+                        maxlength="300"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="imgUpload" class="form-label">Select audio file to upload: (.wav .mp3 .aac ) Max file
+                        size:
+                        10MB
+                      </label>
+                      <input type="file" class="form-control" id="imageUpload" name="file">
+                    </div>
+                    <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+                  </form>
         </div>
       </div>
       <div class="col-md-6">
