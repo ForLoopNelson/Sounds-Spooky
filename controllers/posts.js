@@ -106,6 +106,7 @@ module.exports = {
       })
       console.log("Post has been added!")
       req.flash("success", "Audio file uploaded successfully!")
+      req.flash("success", [])
       res.redirect("/profile")
     } catch (err) {
       console.log(err)
