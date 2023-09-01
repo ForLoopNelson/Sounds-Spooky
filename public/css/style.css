@@ -78,7 +78,8 @@ footer {
 }
 
 .glow-text  {
- text-shadow: 0 0 22px #00bc8c;
+ text-shadow: 0 10px 22px #00bc8c;
+ 
 
 }
 
@@ -248,7 +249,7 @@ footer {
 @media only screen and (max-width : 820px) {
   #index-page {
    
-    background: url(../imgs/creepy-hallway.jpg) no-repeat;
+    background: url(../imgs/creepy-hallway.webp) no-repeat;
     background-size: cover;
     height: 100vh;
     background-position: 44%;
@@ -303,7 +304,7 @@ footer {
 @media screen and (max-width: 420px) {
 #index-page {
    
-    background: url(../imgs/creepy-hallway.jpg) no-repeat;
+    background: url(../imgs/creepy-hallway.webp) no-repeat;
     background-size: cover;
     background-position: 40% ;
     height: 100vh;
