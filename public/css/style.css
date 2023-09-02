@@ -91,6 +91,12 @@ footer {
   margin-top: 30px;
 }
 
+.fa-eye, .fa-eye-slash {
+position: absolute;
+left: 607px;
+margin-top: 6px;
+}
+
 .google {
   width: 50%;
 }
@@ -283,6 +289,12 @@ footer {
     left: 130px;
   }
 
+  .fa-eye, .fa-eye-slash {
+    left: 298px;
+    margin-top: 10px;
+  }
+
+ 
   .likes {
     font-size: 1.6em;
     padding-left: 30px;
@@ -335,6 +347,11 @@ footer {
     .profile-btn {
       margin-bottom: 65px;
       
+    }
+
+    .fa-eye, .fa-eye-slash {
+    left: 188px;
+    margin-top: 10px;
     }
 
      .login-box {
