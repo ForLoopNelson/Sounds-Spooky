@@ -3,10 +3,10 @@
     <div class="row mt-5">
       <div class="col-md-6">
         <div>
-          <p><strong class="glow-text">User Name:</strong><br>
+          <p><strong class="glow-text-1">User Name:</strong><br>
             <%= user.userName %>
           </p>
-          <p><strong class="glow-text">Email:</strong><br>
+          <p><strong class="glow-text-1">Email:</strong><br>
             <%= user.email %>
           </p>
           <a href="/logout" class="col-3 btn btn-primary">Logout</a>
@@ -83,7 +83,9 @@
                 <p><strong>Category</strong>: <% if (posts[i].category) { %>
                     <span class="category-text">
                       <%= posts[i].category.category %>
-                        <p class="category-text">Status: <%= posts[i].shared %>
+                        <p class="glow-text">Status: <span class="category-text">
+                            <%= posts[i].shared %>
+                          </span>
                         </p>
 
                     </span>
