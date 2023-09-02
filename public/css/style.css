@@ -82,6 +82,11 @@ footer {
  
 
 }
+.glow-text-1 {
+ text-shadow: 0 0px 22px #00bc8c;
+ 
+
+}
 
 .add-pad {
   padding-top: 30px;
