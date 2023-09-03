@@ -1,16 +1,7 @@
-// $(".toggle-password").click(function() {
 
-//   $(this).toggleClass("fa-eye fa-eye-slash");
-//   var input = $($(this).attr("toggle"));
-//   if (input.attr("type") == "password") {
-//     input.attr("type", "text");
-//   } else {
-//     input.attr("type", "password");
-//   }
-// });
 
 // Get all elements with the class "toggle-password"
-var togglePasswordElements = document.querySelectorAll(".toggle-password");
+let togglePasswordElements = document.querySelectorAll(".toggle-password");
 
 // Add a click event listener to each element
 togglePasswordElements.forEach(function (element) {
@@ -25,7 +16,7 @@ togglePasswordElements.forEach(function (element) {
     }
 
     // Get the input element to toggle its type
-    var input = document.querySelector(element.getAttribute("toggle"));
+    let input = document.querySelector(element.getAttribute("toggle"));
 
     // Toggle the input type between "password" and "text"
     if (input.getAttribute("type") === "password") {
