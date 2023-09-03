@@ -30,6 +30,11 @@ h1 {
   text-shadow: 0 0 7px #73e6e6;
 }
 
+.post-title-card {
+ text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  0 4px 3px #73e6e6;
+ /* text-shadow: 0 3px 2px #73e6e6; */
+}
+
 .btn {
   cursor: url(../imgs/icons8-white-edit.png), pointer !important;
 }
@@ -53,6 +58,7 @@ h1 {
   width: 7%;
   padding-bottom: 20px;
   filter: drop-shadow(1px 3px #00bc8c);
+  
 }
 
 #index-page {
@@ -100,6 +106,7 @@ footer {
 position: absolute;
 left: 607px;
 margin-top: 6px;
+cursor: pointer;
 }
 
 .google {
