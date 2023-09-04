@@ -12,7 +12,9 @@
           <a href="/logout" class="col-3 btn btn-primary">Logout</a>
         </div>
         <div class="mt-5">
-          <h2 class="add-post">Add a post</h2>
+          <h2 class="add-post">Add a post </h2>
+          <a href="#scrollProfile"><button class="row d-md-none btn btn-dark  mb-3">Go to
+              Current SFX</button></a>
           <% if (messages && messages.error && messages.error.length> 0) { %>
             <div class="alert alert-danger" role="alert">
               <% messages.error.forEach(function(message) { %>
@@ -70,8 +72,8 @@
                   </form>
         </div>
       </div>
-      <div class="col-md-6">
-        <h2 id="your-sfx">Your Current SFX</h2>
+      <div class="col-md-6" id="scrollProfile">
+        <h2 id="your-sfx" class="shared-posts">Your Current SFX</h2>
 
         <ul class="row list-unstyled">
           <% for(var i=0; i<posts.length; i++) {%>
@@ -103,6 +105,6 @@
     </div>
   </div>
 
-
+  <script src="/js/post-scroll.js"></script>
   </div>
   <%- include('partials/footer') -%>
