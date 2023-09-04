@@ -45,6 +45,7 @@
 
 `If user is still "signed in" on browser, the sign up button takes them to profile. not what it should do`
 
+`Let user be able to edit the description of their SFX`
 
 `Clean up mobile views`
 
