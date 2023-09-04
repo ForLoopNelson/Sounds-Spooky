@@ -12,6 +12,7 @@
 
         var scrollToSharedPostsBtn = document.querySelector("#scrollToShared")
         var scrollBackToUserPostsBtn = document.querySelector("#scrollBack")
+        var scrollToCurrentProfileBtn = document.querySelector("#scrollProfile")
 
         scrollToSharedPostsBtn.addEventListener("click", function (event) {
           event.preventDefault()
@@ -21,5 +22,9 @@
         scrollBackToUserPostsBtn.addEventListener("click", function (event) {
           event.preventDefault()
           scrollToSection("Your Posts")
+        })
+        scrollToCurrentProfileBtn.addEventListener("click", function (event) {
+          event.preventDefault()
+          scrollToSection("Your Current SFX")
         })
       });
