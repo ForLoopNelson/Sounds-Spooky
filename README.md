@@ -51,5 +51,6 @@
 `Create a way for user to delete their profile`
 
 
-
+# Mobile 
+`Maybe change the go to current sfxs button placement and design`
 
