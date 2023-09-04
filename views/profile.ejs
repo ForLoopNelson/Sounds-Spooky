@@ -12,9 +12,10 @@
           <a href="/logout" class="col-3 btn btn-primary">Logout</a>
         </div>
         <div class="mt-5">
-          <h2 class="add-post">Add a post </h2>
-          <a href="#scrollProfile"><button class="row d-md-none btn btn-dark  mb-3">Go to
+          <a href="#scrollProfile"><button class="row d-md-none btn btn-secondary  mb-4">Go to
               Current SFX</button></a>
+          <h2 class="add-post">Add a post </h2>
+
           <% if (messages && messages.error && messages.error.length> 0) { %>
             <div class="alert alert-danger" role="alert">
               <% messages.error.forEach(function(message) { %>
