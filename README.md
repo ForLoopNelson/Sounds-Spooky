@@ -48,6 +48,8 @@
 
 `Clean up mobile views`
 
+`Create a way for user to delete their profile`
+
 
 
 
