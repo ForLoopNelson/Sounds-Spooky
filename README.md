@@ -47,7 +47,7 @@
 
 `Let user be able to edit the description of their SFX`
 
-`Clean up mobile views`
+`Clean up mobile views --first adjust the box shadows on post page for bg box and desc box`
 
 `Create a way for user to delete their profile`
 
