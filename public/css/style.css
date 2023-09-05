@@ -52,6 +52,12 @@ h1 {
   border-bottom: 3px solid #00bc8c;
 }
 
+#profile-return {
+  font-family: 'creepster';
+  font-size: 1.7em;
+  font-style: oblique
+}
+
 
 
 #main-img {
@@ -248,9 +254,6 @@ cursor: pointer;
   background:#212121;
   padding-right: 10px;
   margin-right: 160px;
-   
-
-  
 }
 
 .desc-box {
@@ -348,8 +351,19 @@ cursor: pointer;
       
     }
 
+    .add-post {
+      border-bottom: 3px solid #00bc8c;
+      padding-bottom: 4px;
+      margin-bottom: 27px;
+      
+    }
+
     .btn-primary {
       width: 60%;
+    }
+
+    .btn-secondary {
+      margin-left: 4px;
     }
 
     .google {
