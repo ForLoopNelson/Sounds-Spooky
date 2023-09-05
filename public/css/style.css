@@ -250,15 +250,22 @@ cursor: pointer;
 
 
 .box-bg {
-  border: 1px ridge #29a19c;
-  background:#212121;
+  border-radius: 21px;
+background: linear-gradient(145deg, #1e1e1e, #232323);
+box-shadow:  6px 6px 9px #73e6e6,
+             -7px -6px 6px #c1f5e8;
   padding-right: 10px;
   margin-right: 160px;
+
 }
 
 .desc-box {
-  border: 1px ridge #00bc8c;
-  background:#212121;
+  border-radius: 21px;
+background: linear-gradient(145deg, #1e1e1e, #232323);
+box-shadow:  6px 10px 5px #00bc8c,
+             -7px -9px 6px #73e6e6;
+  padding-right: 10px;
+  margin-right: 160px;
   padding: 20px 0 0 40px;
   min-height: 200px;
   margin-right: 35px;
