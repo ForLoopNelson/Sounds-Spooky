@@ -1,30 +1,31 @@
- document.addEventListener("DOMContentLoaded", function () {
-        function scrollToSection(sectionName) {
-          var section = document.querySelector(`.share-feed:contains('${sectionName}')`)
-          var sectionTop = section.getBoundingClientRect().top + window.scrollY
 
-          // Smooth scroll to the section
-          window.scrollTo({
-            top: sectionTop,
-            behavior: "smooth",
-          })
-        }
 
-        var scrollToSharedPostsBtn = document.querySelector("#scrollToShared")
-        var scrollBackToUserPostsBtn = document.querySelector("#scrollBack")
-        var scrollToCurrentProfileBtn = document.querySelector("#scrollProfile")
+function scrollToSharedPosts() {
+  scrollToSection("Shared Posts");
+}
 
-        scrollToSharedPostsBtn.addEventListener("click", function (event) {
-          event.preventDefault()
-          scrollToSection("Shared Posts")
-        })
+function scrollBackToUserPosts() {
+  scrollToSection("Your Posts");
+}
 
-        scrollBackToUserPostsBtn.addEventListener("click", function (event) {
-          event.preventDefault()
-          scrollToSection("Your Posts")
-        })
-        scrollToCurrentProfileBtn.addEventListener("click", function (event) {
-          event.preventDefault()
-          scrollToSection("Your Current SFX")
-        })
+function scrollToCurrentProfile() {
+  scrollToSection("Your Current SFX");
+}
+
+function scrollToSection(sectionName) {
+  const sections = document.querySelectorAll('.share-feed');
+  
+  // Loop through the sections to find the one with the matching text content
+  for (let i = 0; i < sections.length; i++) {
+    if (sections[i].textContent.includes(sectionName)) {
+      let sectionTop = sections[i].getBoundingClientRect().top + window.scrollY;
+
+      // Smooth scroll to the section
+      window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
       });
+      break; // Exit the loop once the section is found
+    }
+  }
+}
