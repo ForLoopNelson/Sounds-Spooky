@@ -354,7 +354,7 @@ box-shadow:  6px 10px 5px #00bc8c,
     }
 
     #tagline {
-      font-size: 10px;
+      font-size: 16px;
       
     }
 
@@ -405,6 +405,10 @@ box-shadow:  6px 10px 5px #00bc8c,
       padding-top: 50px;
     }
 
+    .err-sizing {
+      width: 100%;
+    }
+
     
 
     #logo {
@@ -428,6 +432,7 @@ box-shadow:  6px 10px 5px #00bc8c,
     .box-bg, .desc-box {
       padding-left: 20px;
       margin-left: 39px;
+      margin-bottom: 8px;
     }
 
     .fa-trash {
