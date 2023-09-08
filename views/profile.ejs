@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row mt-5">
       <div class="col-md-6">
-        <div>
+        <div id="current-user">
           <p><strong class="glow-text-1">User Name:</strong><br>
             <%= user.userName %>
           </p>
@@ -11,7 +11,7 @@
           </p>
           <a href="/logout" class="col-3 btn btn-primary">Logout</a>
         </div>
-        <div class="mt-5">
+        <div class="mt-5 post-section">
           <a href="#scrollProfile"><button class="row d-md-none btn btn-secondary  mb-4">Go to
               Current SFX</button></a>
           <h2 class="add-post">Add a post </h2>
@@ -99,7 +99,7 @@
             </li>
             <% } %>
         </ul>
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center mt-5 pt-4">
           <a class="btn btn-primary" href="/feed">Return to Feed</a>
         </div>
       </div>
