@@ -35,8 +35,14 @@ h1 {
   text-shadow: 0 0 7px #73e6e6;
 }
 
+.head-bg {
+  background: linear-gradient(145deg, #201f1f,#131111,#242424, #131111);
+  border-radius: 5%;
+}
+
 .post-title-card {
  text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  0 4px 3px #73e6e6;
+ 
 
 }
 
@@ -50,7 +56,25 @@ h1 {
   text-decoration: underline #00bc8c;
   text-underline-offset: 10px;
   padding-bottom: 32px;
+ 
 }
+
+.post-section {
+   /* background: linear-gradient(145deg, #242424,#201f1f,#242424, #131111); */
+   background: linear-gradient(145deg, #201f1f,#131111,#201f1f, #131111);
+   padding: 30px 10px;
+   border-radius: 10px;
+ 
+}
+
+#current-user {
+     background: linear-gradient(145deg, #201f1f,#131111, #131111, #242424);
+    border-radius: 5%;
+    padding: 10px 0 20px 10px;
+   
+    }
+
+
 
 #your-sfx {
   padding: 20px 0 10px 170px;
@@ -251,6 +275,13 @@ cursor: pointer;
   border: 1px solid #29a19c;
   text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 0 2px #00bc8c;
 }
+ #scrollProfile {
+  text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 0 2px #00bc8c;
+  background: linear-gradient(145deg, #131111,#242424,#131111, #201f1f);
+  border-radius: 5%;
+  padding: 0 20px 15px 20px;
+ }
+
 
 
 
@@ -369,6 +400,8 @@ box-shadow:  6px 10px 12px #00bc8c,
       margin-bottom: 27px;
       
     }
+
+    
 
     .btn-primary {
       width: 60%;
