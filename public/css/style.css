@@ -37,7 +37,8 @@ h1 {
 
 .head-bg {
   background: linear-gradient(145deg, #201f1f,#131111,#242424, #131111);
-  border-radius: 5%;
+  border-radius: 3%;
+  
 }
 
 .post-title-card {
@@ -62,13 +63,26 @@ h1 {
 .post-section {
    /* background: linear-gradient(145deg, #242424,#201f1f,#242424, #131111); */
    background: linear-gradient(145deg, #201f1f,#131111,#201f1f, #131111);
-   padding: 30px 10px;
-   border-radius: 10px;
- 
+   border-top: 2px solid #131111;
+   border-left: 2px solid #131111;
+   padding: 30px 7px;
+   border-radius: 5%;
+}
+
+#scrollProfile {
+  text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 0 2px #00bc8c;
+  background: linear-gradient(145deg, #131111,#242424,#131111, #201f1f);
+  border-radius: 5%;
+  border-top: 3px solid #131111;
+  border-right: 3px solid #131111;
+  border-bottom: 3px solid #131111;
+  padding: 0 20px 15px 20px;
 }
 
 #current-user {
      background: linear-gradient(145deg, #201f1f,#131111, #131111, #242424);
+     border-bottom: 2px solid #131111;
+     border-right: 1px solid #131111;
     border-radius: 5%;
     padding: 10px 0 20px 10px;
    
@@ -87,6 +101,14 @@ h1 {
   font-style: oblique
 }
 
+.your-feed {
+  background: linear-gradient(220deg, #131111,#242424,#131111, #201f1f);
+  border-radius: 10px;
+  border: 3px groove #00bc8c;
+  box-shadow: inset 0px 0px 3px 3px #00bc8c;
+ 
+  
+}
 
 
 #main-img {
@@ -275,12 +297,7 @@ cursor: pointer;
   border: 1px solid #29a19c;
   text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 0 2px #00bc8c;
 }
- #scrollProfile {
-  text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 0 2px #00bc8c;
-  background: linear-gradient(145deg, #131111,#242424,#131111, #201f1f);
-  border-radius: 5%;
-  padding: 0 20px 15px 20px;
- }
+ 
 
 
 
@@ -401,6 +418,10 @@ box-shadow:  6px 10px 12px #00bc8c,
       
     }
 
+    #scrollProfile {
+      margin-top: 40px;
+    }
+
     
 
     .btn-primary {
@@ -421,7 +442,7 @@ box-shadow:  6px 10px 12px #00bc8c,
     }
 
     .profile-btn {
-      margin-bottom: 65px;
+      margin-bottom: 35px;
       
     }
 
