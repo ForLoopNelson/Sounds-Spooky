@@ -106,8 +106,6 @@ h1 {
   border-radius: 10px;
   border: 3px groove #00bc8c;
   box-shadow: inset 0px 0px 3px 3px #00bc8c;
- 
-  
 }
 
 
@@ -326,6 +324,11 @@ box-shadow:  6px 10px 12px #00bc8c,
   
 }
 
+.like-count {
+  margin-left: 10px;
+  
+}
+
 .btn-outline-danger {
   margin-top: 25px;
 }
@@ -351,6 +354,10 @@ box-shadow:  6px 10px 12px #00bc8c,
   #shared {
     margin-bottom: 15px;
     
+  }
+
+  .mobile-feed {
+    padding: 0;
   }
 
   .box-bg {
@@ -411,6 +418,10 @@ box-shadow:  6px 10px 12px #00bc8c,
       
     }
 
+    .mobile-feed {
+      padding-right: 20px;
+    }
+
     .add-post {
       border-bottom: 3px solid #00bc8c;
       padding-bottom: 4px;
@@ -418,8 +429,15 @@ box-shadow:  6px 10px 12px #00bc8c,
       
     }
 
+    .post-section {
+      border-radius: 6px;
+    }
+
+  
+
     #scrollProfile {
       margin-top: 40px;
+      border-radius: 6px;
     }
 
     
@@ -432,6 +450,10 @@ box-shadow:  6px 10px 12px #00bc8c,
       margin-left: 4px;
     }
 
+    .custom-pad{
+      margin-left: 30px;
+    }
+
     .google {
       width: 60%;
       font-size: 12px;
@@ -439,6 +461,7 @@ box-shadow:  6px 10px 12px #00bc8c,
 
     .wip {
       font-size: 12px;
+      width: 100%;
     }
 
     .profile-btn {
@@ -512,6 +535,11 @@ box-shadow:  6px 10px 12px #00bc8c,
       right: 19px;
       
     }
+
+    .add-pad {
+      padding-right: 5px;
+    }
+   
 
     footer {
       padding: 30px 0 ;
