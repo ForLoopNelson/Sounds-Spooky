@@ -10,10 +10,6 @@ audio {
   
 }
 
-.post-audio {
-  border: 8px groove #232323;
-  border-radius: 40px;
-}
 
 a {
   text-decoration: none;
@@ -35,9 +31,10 @@ h1 {
   text-shadow: 0 0 7px #73e6e6;
 }
 
+
 .head-bg {
   background: linear-gradient(145deg, #201f1f,#131111,#242424, #131111);
-  border-radius: 3%;
+  border-radius: 10px;
   
 }
 
@@ -52,12 +49,18 @@ h1 {
 }
 
 
+.post-audio {
+  border: 8px groove #232323;
+  border-radius: 40px;
+}
 
-.add-post  {
-  text-decoration: underline #00bc8c;
-  text-underline-offset: 10px;
-  padding-bottom: 32px;
- 
+#current-user {
+     background: linear-gradient(145deg, #201f1f,#131111, #131111, #242424);
+     border-bottom: 2px solid #131111;
+     border-right: 1px solid #131111;
+    border-radius: 10px;
+    padding: 10px 0 20px 10px;
+   
 }
 
 .post-section {
@@ -69,6 +72,18 @@ h1 {
    border-radius: 5%;
 }
 
+
+
+
+.add-post  {
+  text-decoration: underline #00bc8c;
+  text-underline-offset: 10px;
+  padding-bottom: 32px;
+ 
+}
+
+
+
 #scrollProfile {
   text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 0 2px #00bc8c;
   background: linear-gradient(145deg, #131111,#242424,#131111, #201f1f);
@@ -79,14 +94,7 @@ h1 {
   padding: 0 20px 15px 20px;
 }
 
-#current-user {
-     background: linear-gradient(145deg, #201f1f,#131111, #131111, #242424);
-     border-bottom: 2px solid #131111;
-     border-right: 1px solid #131111;
-    border-radius: 5%;
-    padding: 10px 0 20px 10px;
-   
-    }
+
 
 
 
@@ -345,11 +353,21 @@ box-shadow:  6px 10px 12px #00bc8c,
 
   
   }
+  
+  audio {
+    display: block;
+    
+  }
 
   #your-sfx {
     font-size: 2em;
     padding: 0 0 15px 0
   }
+
+  .post-section, #scrollProfile {
+    border-radius: 10px;
+  }
+  
 
   #shared {
     margin-bottom: 15px;
