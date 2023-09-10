@@ -27,7 +27,9 @@
               <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3" id="trash">
                 <button class="btn btn-primary fa fa-trash " type="submit" onclick="return confirmDelete()"></button>
               </form>
-              <%}%>
+              <% } else { %>
+                <div class="col-1 col-sm-3"></div>
+                <%}%>
           </div>
         </div>
         <div class=" col-md-5 mt-3 desc-box">
