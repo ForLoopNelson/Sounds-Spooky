@@ -40,6 +40,7 @@ module.exports = {
       console.log(err)
     }
   },
+
   createPost: async (req, res) => {
     try {
 
@@ -175,4 +176,33 @@ module.exports = {
       res.redirect("/profile")
     }
   },
-}
+
+
+  // <!-- WIP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+ editPost: async (req, res) => {
+ try {
+    const { userId, editPost } = req.body;
+    const postId = req.params.id;
+    // const userId = req.body.userId
+
+    // Find the post by ID
+        const post = await Post.findById(postId);
+
+    // Check if the user has permission to edit this post
+    if (post.user.toString() === userId) {
+      // Update the post's caption in the database
+      post.caption = editPost;
+      await post.save();
+
+      // Send a success response
+      res.status(200).send('Caption updated successfully');
+      res.redirect(`/post/${post._id}`)
+    } else {
+      // Handle unauthorized access (e.g., show an error message)
+      res.status(403).send('You do not have permission to edit this post.');
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+}}
