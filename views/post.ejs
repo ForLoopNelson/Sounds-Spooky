@@ -32,12 +32,36 @@
                 <%}%>
           </div>
         </div>
-        <div class=" col-md-5 mt-3 desc-box">
+
+
+        <!-- WIP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <div class="col-md-5 mt-3 desc-box">
           <h3>Description</h3>
           <p class="add-pad">
             <%= post.caption %>
           </p>
+          <button class="btn btn-primary fa fa-pen edit-button" data-postid="<%= post.id %>"> &nbsp;Edit - I don't work
+            yet</button>
+          <form action="/editPost" method="POST" class="edit-form" data-postid="<%= post.id %>"
+            data-userid="<%= user.id %>">
+            <input type="hidden" name="userId" value="<%= user.id %>">
+            <textarea class="form-control" rows="4" name="editedCaption"><%= post.caption %></textarea>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
         </div>
+        <!-- <div class=" col-md-5 mt-3 desc-box">
+          <h3>Description</h3>
+          <p class="add-pad">
+            <%= post.caption %>
+          </p>
+          <%if(post.user==user.id){ %>
+            <a href="/post/editPost/<%= post.id %>" class="btn btn-primary fa fa-pen"></a>
+            <% } else { %>
+              <div class="col-1 col-sm-3"></div>
+              <%}%>
+        </div> -->
+
+        <!-- WIP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         <h2 class="add-pad">Add a comment</h2>
 
         <% if (messages && messages.error && messages.error.length> 0) { %>
@@ -89,6 +113,7 @@
       }
     </script>
     <script src="/js/audio.js"></script>
+    <script src="/js/edit-post.js"></script>
   </body>
 
   <%- include('partials/footer') -%>
