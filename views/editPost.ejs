@@ -1,0 +1,18 @@
+<%- include('partials/header') -%>
+  <div id="current-user">
+    <p><strong class="glow-text-1">User Name:</strong><br>
+      <%= user.userName %>
+    </p>
+    <p><strong class="glow-text-1">Email:</strong><br>
+      <%= user.email %>
+    </p>
+    <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+  </div>
+
+  <div class="mb-3">
+    <label for="caption" class="form-label">Caption: Brief description of the sound. (Max: 300
+      characters)</label>
+    <textarea class="form-control" id="caption" name="caption" spellcheck="true" maxlength="300"></textarea>
+  </div>
+
+  <%- include('partials/footer') -%>
