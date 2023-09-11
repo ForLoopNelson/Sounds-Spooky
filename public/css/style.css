@@ -332,6 +332,10 @@ box-shadow:  6px 10px 12px #00bc8c,
   
 }
 
+.edit-form {
+  display: none;
+}
+
 .like-count {
   margin-left: 10px;
   
@@ -546,6 +550,12 @@ box-shadow:  6px 10px 12px #00bc8c,
       padding-left: 30px;
       font-size: larger;
       
+    }
+
+    .fa-pen {
+      margin-top: 24px;
+      padding-right:32px;
+      width: 100%;
     }
 
     .fa-heart::before {
