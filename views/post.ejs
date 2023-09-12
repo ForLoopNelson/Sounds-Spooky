@@ -14,7 +14,7 @@
             <source src="<%= post.audio%>" type="">
           </audio>
 
-
+          <!-- Like and trash -->
           <div class="row justify-content-between">
             <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
               <button class="btn btn-primary fa fa-heart" type="submit"></button>
@@ -34,34 +34,36 @@
         </div>
 
 
-        <!-- WIP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <!-- Description box (caption) -->
         <div class="col-md-5 mt-3 desc-box">
           <h3>Description</h3>
           <p class="add-pad">
             <%= post.caption %>
+              <% console.log('post.user:', post.user); %>
+                <% console.log('user.id:', user.id); %>
           </p>
-          <button class="btn btn-primary fa fa-pen edit-button" data-postid="<%= post.id %>"> &nbsp;Edit - I don't work
-            yet</button>
-          <form action="/editPost" method="POST" class="edit-form" data-postid="<%= post.id %>"
-            data-userid="<%= user.id %>">
-            <input type="hidden" name="userId" value="<%= user.id %>">
-            <textarea class="form-control" rows="4" name="editedCaption"><%= post.caption %></textarea>
-            <button type="submit" class="btn btn-primary">Save</button>
-          </form>
+          <% if (post.user==user.id) {%>
+            <button class="btn btn-primary fa fa-pen edit-button" data-postid="<%= post.id %>"> &nbsp;Edit
+            </button>
+            <form action="/post/editPost/<%= post.id %>" method="POST" class="edit-form" data-postid="<%= post.id %>"
+              data-userid="<%= user.id %>">
+              <input type="hidden" name="userId" value="<%= user.id %>">
+              <textarea class="form-control" rows="4" name="editPost"><%= post.caption %></textarea>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+            <% } %>
+              <% if (messages && messages.success && messages.success.length> 0) { %>
+                <div class="alert alert-success caption-update col-md-5 mt-1 " role="alert">
+                  <% messages.success.forEach(function(message) { %>
+                    <%= message %><br>
+                      <% }); %>
+                        <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="alert"
+                          aria-label="Close"></button>
+                </div>
+                <% } %>
         </div>
-        <!-- <div class=" col-md-5 mt-3 desc-box">
-          <h3>Description</h3>
-          <p class="add-pad">
-            <%= post.caption %>
-          </p>
-          <%if(post.user==user.id){ %>
-            <a href="/post/editPost/<%= post.id %>" class="btn btn-primary fa fa-pen"></a>
-            <% } else { %>
-              <div class="col-1 col-sm-3"></div>
-              <%}%>
-        </div> -->
 
-        <!-- WIP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <!-- Comment Section -->
         <h2 class="add-pad">Add a comment</h2>
 
         <% if (messages && messages.error && messages.error.length> 0) { %>
@@ -73,7 +75,7 @@
                     aria-label="Close"></button>
           </div>
           <% } %>
-            <!-- TODO fix above -->
+
             <form action="/comment/createComment/<%=post._id%>" method="POST">
               <div class="mb-3">
                 <label for="comment" class="form-label">Comment</label>
