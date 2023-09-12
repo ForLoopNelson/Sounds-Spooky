@@ -15,10 +15,9 @@ router.post("/createPost", upload.single("file"), postsController.createPost)
 //Lets user like a post In controller uses POST model
 router.put("/likePost/:id", postsController.likePost)
 
-// WIP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+// Let's a user edit their caption for a post
+router.post("/editPost/:id", ensureAuth, postsController.editPost)
 
-router.post("/post/:id", ensureAuth, postsController.editPost)
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 
 
 //delete a post the user has created
