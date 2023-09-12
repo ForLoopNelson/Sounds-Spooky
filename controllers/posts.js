@@ -178,11 +178,12 @@ module.exports = {
   },
 
 
-  // <!-- WIP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+ 
  editPost: async (req, res) => {
  try {
     const { userId, editPost } = req.body;
     const postId = req.params.id;
+   
     // const userId = req.body.userId
 
     // Find the post by ID
@@ -195,8 +196,8 @@ module.exports = {
       await post.save();
 
       // Send a success response
-      res.status(200).send('Caption updated successfully');
-      res.redirect(`/post/${post._id}`)
+     req.flash("success", "Your caption has been updated successfully!")
+     res.redirect(`/post/${req.params.id}`)
     } else {
       // Handle unauthorized access (e.g., show an error message)
       res.status(403).send('You do not have permission to edit this post.');
