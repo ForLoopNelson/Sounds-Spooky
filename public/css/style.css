@@ -332,6 +332,10 @@ box-shadow:  6px 10px 12px #00bc8c,
   
 }
 
+.caption-update {
+  width: 70%;
+}
+
 .edit-form {
   display: none;
 }
@@ -510,6 +514,10 @@ box-shadow:  6px 10px 12px #00bc8c,
     }
 
     .err-sizing {
+      width: 100%;
+    }
+
+    .caption-update {
       width: 100%;
     }
 
