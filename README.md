@@ -19,7 +19,7 @@
   - CLOUD_NAME = `your cloudinary cloud name`
   - API_KEY = `your cloudinary api key`
   - API_SECRET = `your cloudinary api secret`
---FOR GOOGLE AUTH:
+
   - GOOGLE_CLIENT_ID = `your google client id`
   - GOOGLE_CLIENT_SECRET = `your google client secret`
   
@@ -29,7 +29,7 @@
 # Run
 
 `npm start`
--- Or to run in Development mode: `npm run dev`
+...Or to run in Development mode: `npm run dev`
 
 --Production: `node server.js`
 
