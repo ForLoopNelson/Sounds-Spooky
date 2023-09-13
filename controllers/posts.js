@@ -184,7 +184,7 @@ module.exports = {
     const { userId, editPost } = req.body;
     const postId = req.params.id;
    
-    // const userId = req.body.userId
+  
 
     // Find the post by ID
         const post = await Post.findById(postId);
