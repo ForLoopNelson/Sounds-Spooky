@@ -64,7 +64,7 @@ h1 {
 }
 
 .post-section {
-   /* background: linear-gradient(145deg, #242424,#201f1f,#242424, #131111); */
+   
    background: linear-gradient(145deg, #201f1f,#131111,#201f1f, #131111);
    border-top: 2px solid #131111;
    border-left: 2px solid #131111;
@@ -269,10 +269,10 @@ cursor: pointer;
 
 #post-title {
   display: inline;
- 
- font-family: 'creepster';
+  font-family: 'creepster';
  font-size: 1.7em;
  font-style: oblique;
+ text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 1px 1px #c1f5e8;
 }
 
 .category-text {
