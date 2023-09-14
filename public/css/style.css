@@ -85,7 +85,7 @@ h1 {
 
 
 #scrollProfile {
-  text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 0 2px #00bc8c;
+  /* text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 0 2px #fff; */
   background: linear-gradient(145deg, #131111,#242424,#131111, #201f1f);
   border-radius: 5%;
   border-top: 3px solid #131111;
@@ -198,6 +198,8 @@ cursor: pointer;
   text-shadow: 0 10px 22px #73e6e6;
 }
 
+
+
 #shared {
   background: #212121;
  color: #29a19c;
@@ -212,9 +214,9 @@ cursor: pointer;
   -moz-appearance: none;
   appearance: none;
   background: url(../imgs/ghost-edit.png) 96% / 15% no-repeat #212121;
-  
-  
 }
+
+
 
 #audio-category {
   background: #212121;
