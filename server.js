@@ -76,9 +76,7 @@ app.listen(
   PORT,
   console.log(`Server is running on ${process.env.PORT}`),
   //test for Cyclic Deploy
-    console.log(`${process.env.DB_STRING}`)
+    console.log(`Let's get Spooky!`)
 )
 })
-// app.listen(process.env.PORT, () => {
-//   console.log("Server is running, you better catch it!")
 
