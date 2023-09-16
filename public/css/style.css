@@ -352,10 +352,16 @@ box-shadow:  6px 10px 12px #00bc8c,
 }
 
 .list-icon {
-  list-style-image: url(../imgs/icons8-horror-skull.png);
+  list-style-image: url(../imgs/skull-20.png);
+  margin-top: 20px;
   
   
 }
+
+  .btn-space {
+    margin-right: 6px;
+   
+  }
 
 
 /* Mobile Queries ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -419,6 +425,7 @@ box-shadow:  6px 10px 12px #00bc8c,
   .likes {
     font-size: 1.6em;
     padding-left: 30px;
+   
   }
   
   
@@ -533,7 +540,7 @@ box-shadow:  6px 10px 12px #00bc8c,
 
     #logo {
       width: 40%;
-      border: 1px solid red;
+     
     }
 
     #your-sfx {
@@ -586,9 +593,7 @@ box-shadow:  6px 10px 12px #00bc8c,
       padding-right: 5px;
     }
 
-    li::marker {
-     content: url(../imgs/icons8-horror-skull.png);
-    }
+   
    
 
     footer {
