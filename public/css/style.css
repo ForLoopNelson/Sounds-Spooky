@@ -79,6 +79,7 @@ h1 {
   text-decoration: underline #00bc8c;
   text-underline-offset: 10px;
   padding-bottom: 32px;
+  
  
 }
 
@@ -99,8 +100,10 @@ h1 {
 
 
 #your-sfx {
-  padding: 20px 0 10px 170px;
+  padding: 20px 0 10px 90px;
   border-bottom: 3px solid #00bc8c;
+  font-family: "Eater";
+  text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black,  2px 5px 1px #00bc8c;
 }
 
 #profile-return {
@@ -182,13 +185,17 @@ cursor: pointer;
 
 .share-feed {
   border-bottom: 3px solid #00bc8c;
-  padding: 10px 0;
+  padding: 20px 0;
+  font-family: "Nosifer";
+  text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black, -9px -5px 9px #29a19c;
   
 }
 
 .pr-5 {
   padding-left: 40px;
 }
+
+
 
 .shared-posts audio {
   border: 5px solid #73e6e6;
@@ -313,8 +320,8 @@ cursor: pointer;
 .box-bg {
   border-radius: 21px;
 background: linear-gradient(145deg, #404040, #232323);
-box-shadow:  6px 6px 9px #73e6e6,
-             -7px -6px 13px #c1f5e8;
+box-shadow:  1px 3px 20px #73e6e6,
+             -7px -6px 3px #c1f5e8;
   padding-right: 10px;
   margin-right: 160px;
   font-family: 'Metal Mania';
@@ -324,9 +331,9 @@ box-shadow:  6px 6px 9px #73e6e6,
 
 .desc-box {
   border-radius: 21px;
-background: linear-gradient(145deg, #232323, #404040);
-box-shadow:  6px 10px 12px #00bc8c,
-             -7px -9px 12px #73e6e6;
+  background: linear-gradient(145deg, #232323, #404040);
+  box-shadow:  1px 3px 20px #00bc8c,
+             -7px -9px 2px #73e6e6;
   padding-right: 10px;
   margin-right: 160px;
   padding: 20px 0 0 40px;
