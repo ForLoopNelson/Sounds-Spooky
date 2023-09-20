@@ -79,6 +79,7 @@ h1 {
   text-decoration: underline #00bc8c;
   text-underline-offset: 10px;
   padding-bottom: 32px;
+  font-family: "eater";
   
  
 }
@@ -119,6 +120,9 @@ h1 {
   box-shadow: inset 0px 0px 3px 3px #00bc8c;
 }
 
+.feed-font {
+  font-family: "Russo One";
+}
 
 #main-img {
   width: 7%;
@@ -148,6 +152,7 @@ footer {
   padding: 10px 0 20px 0;
   /* border-top: 2px ridge #00bc8c; */
 }
+
 
 .glow-text  {
  text-shadow: 0 10px 22px #00bc8c;
@@ -314,19 +319,22 @@ cursor: pointer;
 }
  
 
+.postPage-font {
+  font-family: 'Metal Mania', sans-serif;
+}
 
 
 
 .box-bg {
+  box-sizing: border-box;
   border-radius: 21px;
 background: linear-gradient(145deg, #404040, #232323);
 box-shadow:  1px 3px 20px #73e6e6,
              -7px -6px 3px #c1f5e8;
   padding-right: 10px;
   margin-right: 160px;
-  font-family: 'Metal Mania';
-  
-
+  max-height: 200px;
+ 
 }
 
 .desc-box {
@@ -340,8 +348,10 @@ box-shadow:  1px 3px 20px #73e6e6,
   min-height: 200px;
   margin-right: 35px;
   
-  
 }
+
+
+
 
 .caption-update {
   width: 70%;
@@ -496,6 +506,7 @@ box-shadow:  1px 3px 20px #73e6e6,
       padding-bottom: 4px;
       margin-bottom: 27px;
       
+      
     }
 
     .post-section {
@@ -564,6 +575,8 @@ box-shadow:  1px 3px 20px #73e6e6,
       width: 100%;
     }
 
+  
+
     
 
     #logo {
@@ -610,9 +623,9 @@ box-shadow:  1px 3px 20px #73e6e6,
     }
 
     .fa-pen {
-      margin-top: 24px;
-      padding-right:32px;
-      width: 100%;
+      margin: auto 0;
+      padding-right:17px;
+      width: 70%;
     }
 
     .fa-heart::before {
