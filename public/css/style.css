@@ -144,14 +144,22 @@ h1 {
 }
 
 
-footer {
+ footer {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: large;
-  margin-top: 20px;
-  padding: 10px 0 20px 0;
-  /* border-top: 2px ridge #00bc8c; */
-}
+ margin-left: 420px;
+
+  padding: 10px 0px 20px 0;
+  
+} 
+
+
+.delete-profile {
+  
+  margin-left: auto;
+} 
 
 
 .glow-text  {
@@ -471,9 +479,18 @@ box-shadow:  1px 3px 20px #73e6e6,
     width: 100%;
   }
 
+    .delete-profile {
+      display: block;
+      font-size: .8em;
+     margin: 0 0 0 190px;
+    }
+
   footer {
-    padding-top: 250px;
-    font-size: 1.3em;
+    display: block;
+    padding-top: 100px;
+    font-size: 1.1em;
+    margin-left: 120px;
+    margin-right: 0;
   }
 
  
@@ -637,13 +654,21 @@ box-shadow:  1px 3px 20px #73e6e6,
     .add-pad {
       padding-right: 5px;
     }
+    
+    .delete-profile {
+      display: block;
+      font-size: .8em;
+     margin: 0 0 0 90px;
+    }
 
    
    
 
     footer {
-      padding: 30px 0 ;
-      font-size: .8em;
+      display: block;
+      margin: 0 0 0 60px;
+      padding: 10px 0 ;
+      font-size: .6em;
     }
 }
   
