@@ -42,7 +42,7 @@ exports.postLogin = (req, res, next) => {
     })
   })(req, res, next)
 }
-
+ // Vercel SUCKS!!
 // PW reset start ++++++++++++++++++++++++++++++++++++++++
 exports.renderResetPasswordForm = (req, res) => {
   res.render("reset-password", {
