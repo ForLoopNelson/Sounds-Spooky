@@ -25,6 +25,8 @@ require("./config/passport")(passport)
 // connectDB()
 const app = express()
 
+
+
 //Using EJS for views
 app.set("view engine", "ejs")
 
