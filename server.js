@@ -44,6 +44,7 @@ app.use(logger("dev"))
 app.use(methodOverride("_method"))
 
 // Setup Sessions - stored in MongoDB
+// Check whether this is really needed as it adds up quick
 app.use(
   session({
     secret: "keyboard cat",
