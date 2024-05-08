@@ -156,10 +156,7 @@ h1 {
 } 
 
 
-.delete-profile {
-  
-  margin-left: auto;
-} 
+
 
 
 .glow-text  {
@@ -553,7 +550,7 @@ box-shadow:  1px 3px 20px #73e6e6,
 
     .google {
       width: 100%;
-      font-size: 16px;
+      font-size: 13px;
     }
 
     .wip {
