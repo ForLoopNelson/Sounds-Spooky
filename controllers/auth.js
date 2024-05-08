@@ -38,11 +38,34 @@ exports.postLogin = (req, res, next) => {
       if (err) {
         return next(err)
       }
+
+       const isGoogleUser = user.googleId !== undefined;
+
+      // Define the user data to be passed to the profile page
+      const userData = {
+        userName: isGoogleUser ? "Google User" : user.userName,
+        email: isGoogleUser ? user.email : "Email not available",
+      };
+
       res.redirect(req.session.returnTo || "/profile")
+     })
     })
-  })(req, res, next)
+  (req, res, next)
 }
- // Vercel SUCKS!!
+
+
+// GOOGLE AUTH ***************************************************************************************
+// Login with Google
+exports.getGoogleLogin = passport.authenticate("google", {
+  scope: ["profile", "email"],
+});
+
+exports.getGoogleCallback = passport.authenticate("google", {
+  failureRedirect: "/login", // Redirect to login page on authentication failure
+  successRedirect: "/profile", // Redirect to profile page on successful authentication
+});
+//GOOGLE ***********************************************************************************************/
+ 
 // PW reset start ++++++++++++++++++++++++++++++++++++++++
 exports.renderResetPasswordForm = (req, res) => {
   res.render("reset-password", {
