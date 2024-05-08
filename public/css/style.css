@@ -552,8 +552,8 @@ box-shadow:  1px 3px 20px #73e6e6,
     }
 
     .google {
-      width: 60%;
-      font-size: 12px;
+      width: 100%;
+      font-size: 16px;
     }
 
     .wip {
@@ -586,6 +586,11 @@ box-shadow:  1px 3px 20px #73e6e6,
 
     .err-sizing {
       width: 100%;
+    }
+
+    .alert-mobile {
+      width: 150%;
+      margin-right: 150px;
     }
 
     .caption-update {
