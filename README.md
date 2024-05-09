@@ -41,7 +41,6 @@
 
 `Have feed show posts from mutual Users (followers) -- This is kind of done. If a user selects their post to be public, others can see it and like and comment and listen--`
 
-`Setup another way to login, like Google or github`
 
 `If user is still "signed in" on browser, the sign up button takes them to profile. not what it should do`
 
@@ -53,4 +52,5 @@
 
 # Mobile 
 `Maybe change the go to current sfxs button placement and design`
+`User Post page looks wonky on ipad and similiar sized screens`
 
