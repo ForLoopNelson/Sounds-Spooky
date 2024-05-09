@@ -86,33 +86,36 @@
       </div>
       <div class="col-md-6" id="scrollProfile">
         <h2 id="your-sfx" class="shared-posts">Your Current SFX</h2>
+        <% if (posts.length===0) { %>
+          <p id="empty-post">It's too quiet here, upload some Sounds</p>
+          <% } else { %>
+            <ul class="row list-unstyled">
+              <% for(var i=0; i<posts.length; i++) {%>
+                <li class="col-6 justify-content-between mt-5">
+                  <a href="/post/<%= posts[i]._id%>">
+                    <h3 id="post-title">
+                      <%= posts[i].title %>
+                    </h3>
+                    <p><strong>Category</strong>: <% if (posts[i].category) { %>
+                        <span class="category-text">
+                          <%= posts[i].category.category %>
+                            <p class="glow-text">Status: <span class="category-text">
+                                <%= posts[i].shared %>
+                              </span>
+                            </p>
 
-        <ul class="row list-unstyled">
-          <% for(var i=0; i<posts.length; i++) {%>
-            <li class="col-6 justify-content-between mt-5">
-              <a href="/post/<%= posts[i]._id%>">
-                <h3 id="post-title">
-                  <%= posts[i].title %>
-                </h3>
-                <p><strong>Category</strong>: <% if (posts[i].category) { %>
-                    <span class="category-text">
-                      <%= posts[i].category.category %>
-                        <p class="glow-text">Status: <span class="category-text">
-                            <%= posts[i].shared %>
-                          </span>
-                        </p>
+                        </span>
+                        <% } %>
+                    </p>
 
-                    </span>
-                    <% } %>
-                </p>
-
-              </a>
-            </li>
+                  </a>
+                </li>
+                <% } %>
+            </ul>
             <% } %>
-        </ul>
-        <div class="row justify-content-center mt-5 pt-4">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div>
+              <div class="row justify-content-center mt-5 pt-4">
+                <a class="btn btn-primary" href="/feed">Return to Feed</a>
+              </div>
       </div>
     </div>
   </div>
