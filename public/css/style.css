@@ -96,7 +96,12 @@ h1 {
   padding: 0 20px 15px 20px;
 }
 
-
+#empty-post {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -333,9 +338,9 @@ cursor: pointer;
 .box-bg {
   box-sizing: border-box;
   border-radius: 21px;
-background: linear-gradient(145deg, #404040, #232323);
-box-shadow:  1px 3px 20px #73e6e6,
-             -7px -6px 3px #c1f5e8;
+background: linear-gradient(10deg, #404040, #232323);
+box-shadow:  1px 7px 6px #316464,
+             -3px -9px 6px #222f2f;
   padding-right: 10px;
   margin-right: 160px;
   max-height: 200px;
@@ -345,8 +350,8 @@ box-shadow:  1px 3px 20px #73e6e6,
 .desc-box {
   border-radius: 21px;
   background: linear-gradient(145deg, #232323, #404040);
-  box-shadow:  1px 3px 20px #00bc8c,
-             -7px -9px 2px #73e6e6;
+  box-shadow:  7px 10px 13px #222f2f,
+             -7px -9px 2px #366b6b;
   padding-right: 10px;
   margin-right: 160px;
   padding: 20px 0 0 40px;
