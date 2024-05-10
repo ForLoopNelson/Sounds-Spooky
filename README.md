@@ -39,12 +39,6 @@
 
 `User Profile Picture`
 
-`Have feed show posts from mutual Users (followers) -- This is kind of done. If a user selects their post to be public, others can see it and like and comment and listen--`
-
-
-`If user is still "signed in" on browser, the sign up button takes them to profile. not what it should do`
-
-
 `Clean up CSS. Organize and maybe setup color variables.`
 
 `Create a way for user to delete their profile`
@@ -52,5 +46,5 @@
 
 # Mobile 
 `Maybe change the go to current sfxs button placement and design`
-`User Post page looks wonky on ipad and similiar sized screens`
+`Audio posts on feed page can get stacked weird looking on mobile devices.`
 
