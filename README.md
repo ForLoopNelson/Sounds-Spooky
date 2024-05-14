@@ -35,6 +35,8 @@
 
 # TODO's
 
+`CHECK TO UPDATE CONNECT-MONGO DRIVER TO 4x`
+
 `Create a forgot password, reset password feature`
 
 `User Profile Picture`
