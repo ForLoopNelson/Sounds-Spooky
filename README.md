@@ -33,6 +33,13 @@
 
 --Production: `node server.js`
 
+
+# NPM UPDATES!!!
+-- 7 pkgs need updates. Only one is giving a deprecation Warning but not crashing the app yet. 
+-- Made a branch to test with updates and it was a nightmare
+
+--Also check for pkgs that can be removed. I believe ffmpeg isn't used at all.
+
 # TODO's
 
 `CHECK TO UPDATE CONNECT-MONGO DRIVER TO 4x`
