@@ -68,8 +68,10 @@ exports.getGoogleCallback = passport.authenticate("google", {
  
 // PW reset start ++++++++++++++++++++++++++++++++++++++++
 exports.renderResetPasswordForm = (req, res) => {
+  
   res.render("reset-password", {
-    title: "Reset Password",
+    title: "Reset Password"
+   
   });
 };
 // WIP +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -146,3 +148,18 @@ exports.postSignup = (req, res, next) => {
     }
   )
 }
+
+// Delete profile route
+// Controller to render the delete profile form
+exports.deleteProfileForm = (req, res) => {
+  // Check if the user is logged in (req.user will be populated if logged in)
+  if (!req.user) {
+    return res.redirect("/login"); // Redirect to login if the user is not logged in
+  }
+  console.log("Delete Profile route hit")
+  // Render the delete profile form if the user is logged in
+  res.render("deleteProfile", {
+    title: "Delete Profile",  // Title for the page
+   
+  });
+};

@@ -28,4 +28,8 @@ router.get(
   }
 )
 
+// Route for profile deletion
+router.get("/deleteProfile", ensureAuth, authController.deleteProfileForm)
+
+
 module.exports = router
