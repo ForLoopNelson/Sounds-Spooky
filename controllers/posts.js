@@ -31,7 +31,7 @@ module.exports = {
 
   getPost: async (req, res) => {
     try {
-      const post = await Post.findById(req.params.id)
+      const post = await Post.findOne({ _id: req.params.id })
       const comments = await Comment.find({ post: req.params.id })
         .sort({ createdAt: "desc" })
         .lean()
@@ -158,7 +158,7 @@ module.exports = {
   deletePost: async (req, res) => {
     try {
       // Find post by id
-      let post = await Post.findById({ _id: req.params.id })
+      let post = await Post.findOne({ _id: req.params.id })
 
        // Check if the post exists
       if (!post) {
@@ -187,7 +187,7 @@ module.exports = {
   
 
     // Find the post by ID
-        const post = await Post.findById(postId);
+        const post = await Post.findOne({_id:postId});
 
     // Check if the user has permission to edit this post
     if (post.user.toString() === userId) {
