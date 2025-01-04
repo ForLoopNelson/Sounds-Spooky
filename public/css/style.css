@@ -142,7 +142,7 @@ h1 {
   background-position: 10% 31%;  
 }
 #post-page {
-  background: url(../imgs/treesbg.webp) no-repeat;
+  background: url(../imgs/graveyard.webp) no-repeat;
   background-size:cover;
   background-position: 10% 21%;  
   opacity: .9;
@@ -339,7 +339,7 @@ cursor: pointer;
   box-sizing: border-box;
   border-radius: 21px;
 background: linear-gradient(10deg, #404040, #232323);
-box-shadow:  1px 7px 6px #316464,
+box-shadow:  1px 7px 6px #4a8787,
              -3px -9px 6px #222f2f;
   padding-right: 10px;
   margin-right: 160px;
@@ -351,7 +351,7 @@ box-shadow:  1px 7px 6px #316464,
   border-radius: 21px;
   background: linear-gradient(145deg, #232323, #404040);
   box-shadow:  7px 10px 13px #222f2f,
-             -7px -9px 2px #366b6b;
+             -7px -9px 2px #4baeae;
   padding-right: 10px;
   margin-right: 160px;
   padding: 20px 0 0 40px;
