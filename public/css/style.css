@@ -142,9 +142,9 @@ h1 {
   background-position: 10% 31%;  
 }
 #post-page {
-  background: url(../imgs/graveyard.webp) no-repeat;
+  background: url(../imgs/person-ghost-costume-park.webp) no-repeat;
   background-size:cover;
-  background-position: 10% 21%;  
+  background-position: 10% 71%;  
   opacity: .9;
 }
 
@@ -378,7 +378,7 @@ box-shadow:  1px 7px 6px #4a8787,
 
 .comment-even {
  border: 2px solid #131111 ;
- background: linear-gradient(220deg, rgba(19, 17, 17, 1), rgba(32, 31, 31, 0.4), rgba(36, 36, 36, 0.7));
+ background: linear-gradient(220deg, rgba(19, 17, 17, 1), rgba(32, 31, 31, 0.9), rgb(28, 28, 36));
  border-radius: 5px;
  box-shadow:  2px 2px 6px #201f1f,
              -1px -2px 12px #c1f5e8;
@@ -389,7 +389,7 @@ box-shadow:  1px 7px 6px #4a8787,
 .comment-odd {
   border: 2px solid #212121;
   border-radius: 5px;
- background: linear-gradient(220deg, rgba(19, 17, 17, .5), rgba(32, 31, 31, 1), rgba(36, 36, 36, 0.4));
+ background: linear-gradient(220deg, rgba(19, 17, 22, .7), rgba(32, 31, 31, 1), rgba(29, 24, 24, 0.8));
   padding: 10px 10px ;
   box-shadow:  1px 2px 12px #73e6e6,
              -1px -2px 12px #212121;
