@@ -37,6 +37,7 @@
 # NPM UPDATES!!!
 -- 7 pkgs need updates. Only one is giving a deprecation Warning but not crashing the app yet. 
 -- Made a branch to test with updates and it was a nightmare
+-- NPM updates done. things seem okay. Will remove this section after further testing.
 
 --Also check for pkgs that can be removed. I believe ffmpeg isn't used at all.
 
@@ -51,6 +52,8 @@
 `Clean up CSS. Organize and maybe setup color variables.`
 
 `Create a way for user to delete their profile`
+
+`In Post page change Add a comment to stand out more from the background`
 
 
 # Mobile 
