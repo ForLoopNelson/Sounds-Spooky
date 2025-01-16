@@ -55,6 +55,8 @@
 
 `In Post page change Add a comment to stand out more from the background`
 
+`Audio plays for 30 seconds regarless if the audio file stops before that`
+
 
 # Mobile 
 `Maybe change the go to current sfxs button placement and design`
