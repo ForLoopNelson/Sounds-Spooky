@@ -57,6 +57,10 @@
 
 `Audio plays for 30 seconds regarless if the audio file stops before that`
 
+# Google OAuth fixes
+-- Try this in passport.js 
+``` userName: profile.displayName || `user_${profile.id}`, ```
+
 
 # Mobile 
 `Maybe change the go to current sfxs button placement and design`
