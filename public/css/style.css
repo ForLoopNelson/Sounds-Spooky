@@ -459,6 +459,13 @@ box-shadow:  1px 7px 6px #4a8787,
     
   }
 
+  #post-page {
+
+  background-size:cover;
+  background-position: 100% 80%;  
+  opacity: .9;
+}
+
   .mobile-feed {
     padding: 0;
   }
@@ -530,6 +537,13 @@ box-shadow:  1px 7px 6px #4a8787,
       font-size: 16px;
       
     }
+
+     #post-page {
+
+  background-size:cover;
+  background-position: 50% 30%;  
+  opacity: .9;
+}
 
     .mobile-feed {
       padding-right: 20px;
