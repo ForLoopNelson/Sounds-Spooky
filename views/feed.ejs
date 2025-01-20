@@ -55,7 +55,7 @@
                 </p>
                 <p><a href="/post/<%= sharedPosts[i]._id%>" class="btn btn-dark">See More...</p></a>
                 <p><strong>Created By:</strong>
-                  <%= sharedPosts[i].user.userName %>
+                  <%= sharedPosts[i].user.userName || sharedPosts[i].user.displayName %>
                 </p>
                 <audio controls>
                   <source src="<%= sharedPosts[i].audio %>" type="">
