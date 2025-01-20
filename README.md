@@ -60,6 +60,7 @@
 # Google OAuth fixes
 -- Try this in passport.js 
 ``` userName: profile.displayName || `user_${profile.id}`, ```
+-- fix 'E11000 duplicate key error collection: horrorSoundDesign.users index: userName_1 dup key: { userName: null }' error. Maybe remove need to display name from google account and show email or have the google user choose an account name.
 
 
 # Mobile 
