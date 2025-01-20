@@ -55,8 +55,8 @@ module.exports = function (passport) {
       async (accessToken, refreshToken, profile, done) => {
         console.log(profile)
         const newUser = {
-          googleId: profile.id,
-          displayName: profile.displayName,
+          googleId: profile.id || `temp_${Date.now()}`,
+          displayName: profile.displayName  || `user_${profile.id || Date.now()}`,
           firstName: profile.name.givenName,
           lastName: profile.name.familyName,
           image: profile.photos[0].value,
