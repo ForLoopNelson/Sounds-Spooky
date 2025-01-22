@@ -152,7 +152,7 @@ exports.postSignup = (req, res, next) => {
 // Delete profile route
 // Controller to render the delete profile form
 exports.deleteProfileForm = (req, res) => {
-  // Check if the user is logged in (req.user will be populated if logged in)
+  // Check if the user is logged in 
   if (!req.user) {
     return res.redirect("/login"); 
   }
