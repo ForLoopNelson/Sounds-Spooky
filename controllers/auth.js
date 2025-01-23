@@ -43,7 +43,7 @@ exports.postLogin = (req, res, next) => {
 
       // Define the user data to be passed to the profile page
       const userData = {
-        userName: isGoogleUser ? "Google User" : user.userName,
+        userName: isGoogleUser ? "Signed in With Google" : user.userName,
         email: isGoogleUser ? user.email : "Email not available",
       };
 
