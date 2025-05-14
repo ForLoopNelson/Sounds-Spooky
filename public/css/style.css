@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'gunmetl';
+  src: url('../fonts/gunmetl.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 html {
   scroll-behavior: smooth;
@@ -343,7 +351,8 @@ cursor: pointer;
  
 
 .postPage-font {
-  font-family: 'Lacquer', sans-serif;
+  font-family: 'gunmetl', sans-serif;
+  font-size: 3em;
 }
 
 
@@ -352,7 +361,7 @@ cursor: pointer;
   box-sizing: border-box;
   border-radius: 21px;
 background: linear-gradient(10deg, #404040, #232323);
-box-shadow:  1px 7px 6px #4a8787,
+box-shadow:  2px 2px 6px #4a8787,
              -3px -9px 6px #222f2f;
   padding-right: 10px;
   margin-right: 160px;
@@ -364,7 +373,7 @@ box-shadow:  1px 7px 6px #4a8787,
   border-radius: 21px;
   background: linear-gradient(145deg, #232323, #404040);
   box-shadow:  7px 10px 13px #222f2f,
-             -7px -9px 2px #4baeae;
+             -2px -2px 2px #4baeae;
   padding-right: 10px;
   margin-right: 160px;
   padding: 20px 0 0 40px;
@@ -394,7 +403,7 @@ box-shadow:  1px 7px 6px #4a8787,
  background: linear-gradient(220deg, rgba(19, 17, 17, 1), rgba(32, 31, 31, 0.9), rgb(28, 28, 36));
  border-radius: 5px;
  box-shadow:  2px 2px 6px #201f1f,
-             -1px -2px 12px #c1f5e8;
+             -1px -2px 2px #c1f5e8;
  padding: 10px 10px ;
   
 }
@@ -404,8 +413,8 @@ box-shadow:  1px 7px 6px #4a8787,
   border-radius: 5px;
  background: linear-gradient(220deg, rgba(19, 17, 22, .7), rgba(32, 31, 31, 1), rgba(29, 24, 24, 0.8));
   padding: 10px 10px ;
-  box-shadow:  1px 2px 12px #73e6e6,
-             -1px -2px 12px #212121;
+  box-shadow:  1px 2px 3px #73e6e6,
+             -1px -2px 3px #212121;
 }
 
 .btn-outline-danger {
@@ -477,6 +486,10 @@ box-shadow:  1px 7px 6px #4a8787,
   background-size:cover;
   background-position: 100% 80%;  
   opacity: .9;
+}
+
+.postPage-font {
+  font-size: 2em;
 }
 
   .mobile-feed {
