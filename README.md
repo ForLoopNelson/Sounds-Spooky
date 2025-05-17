@@ -55,7 +55,9 @@
 
 `In Post page change Add a comment to stand out more from the background`
 
-`Audio plays for 30 seconds regarless if the audio file stops before that`
+`Audio plays for 30 seconds regarless if the audio file stops before that` --This seems resolved
+
+`Get more info into about page and style it cleaner.`
 
 # Google OAuth fixes
 -- Try this in passport.js 
