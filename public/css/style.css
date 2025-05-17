@@ -149,6 +149,12 @@ h1 {
   background-size:cover;
   background-position: 10% 31%;  
 }
+
+#about-page {
+  background: url(../imgs/ouija.webp) no-repeat;
+  background-size: cover;
+}
+
 #post-page {
   background: url(../imgs/cassette.webp) no-repeat;
   background-size:cover;
