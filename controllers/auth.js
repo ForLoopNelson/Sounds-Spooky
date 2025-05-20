@@ -160,3 +160,55 @@ exports.deleteProfileForm = (req, res) => {
    
   });
 };
+
+// delete profile logic WIP +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+exports.deleteProfile = async (req, res) => {
+  try {
+    const userId = req.user._id;
+
+    // Find all posts by the user
+    const userPosts = await Post.find({ user: userId });
+
+    //  Delete each post's cloudinary file (if any)
+    for (const post of userPosts) {
+      if (post.cloudinaryId) {
+        await cloudinary.uploader.destroy(post.cloudinaryId, {
+          resource_type: "video",
+          folder: "audio_files/",
+        });
+      }
+    }
+
+    //  Delete all posts by the user
+    await Post.deleteMany({ user: userId });
+
+    //  Delete all comments by the user (if you have a Comment model)
+    await Comment.deleteMany({ user: userId }); // optional, if comments exist
+
+    //  Delete the user account
+    const deletedUser = await User.findByIdAndDelete(userId);
+
+    if (deletedUser) {
+      // Logout and destroy session
+      req.logout(() => {
+        req.session.destroy(() => {
+          res.redirect("/");
+        });
+      });
+    } else {
+      req.flash("errors", { msg: "User not found." });
+      res.redirect("/profile");
+    }
+
+  } catch (error) {
+    console.error("Error deleting user:", error);
+    req.flash("errors", { msg: "Something went wrong while deleting your account." });
+    res.redirect("/profile");
+  }
+};
+
+
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
