@@ -58,9 +58,13 @@ h1 {
 
 
 .post-audio {
-  border: 8px groove #232323;
+  border: 8px double #29a19c;
   border-radius: 40px;
 }
+
+/* .audio-controls {
+  
+} */
 
 #current-user {
      background: linear-gradient(145deg, #201f1f,#131111, #131111, #242424);
@@ -371,7 +375,7 @@ box-shadow:  2px 2px 6px #4a8787,
              -3px -9px 6px #222f2f;
   padding-right: 10px;
   margin-right: 160px;
-  max-height: 200px;
+  min-height: 200px;
  
 }
 
@@ -395,7 +399,7 @@ box-shadow:  2px 2px 6px #4a8787,
   width: 70%;
 }
 
-.edit-form {
+.edit-form, .likes-list {
   display: none;
 }
 
