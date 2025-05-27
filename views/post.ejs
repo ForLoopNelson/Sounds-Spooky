@@ -9,19 +9,23 @@
           <h2 class="postPage-font">
             <%= post.title %>
           </h2>
-
+          <div class="audio-controls">
           <audio controls class="post-audio">
             <source src="<%= post.audio%>" type="">
+            
           </audio>
-
+          </div>
           <!-- Like and trash -->
           <div class="row justify-content-between">
             <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
               <button class="btn btn-primary fa fa-heart" type="submit"></button>
             </form>
-            <h3 class="col-3 col-sm-3 d-flex align-items-center add-pad likes">Likes: <span class="like-count">
+            <h3 class="col-3 col-sm-3 d-flex align-items-center add-pad likes liked-by" data-postid="<%= post._id %>"
+              style="cursor: pointer;" role="button" tabindex="0">
+              Likes: <span class="like-count">
                 <%= post.likes %>
               </span>
+            </h3>
             </h3>
             <%if(post.user==user.id){ %>
               <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3" id="trash">
@@ -30,6 +34,13 @@
               <% } else { %>
                 <div class="col-1 col-sm-3"></div>
                 <%}%>
+          </div>
+          <div class="likes-list mt-3" data-postid="<%= post._id %>" style="display: none;">
+            <% post.likedBy.forEach(user=> { %>
+              <p>
+                <%= user.userName %>
+              </p>
+              <% }) %>
           </div>
         </div>
 
