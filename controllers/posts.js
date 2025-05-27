@@ -32,6 +32,7 @@ module.exports = {
   getPost: async (req, res) => {
     try {
       const post = await Post.findOne({ _id: req.params.id })
+      .populate("likedBy", "userName") 
       const comments = await Comment.find({ post: req.params.id })
         .sort({ createdAt: "desc" })
         .lean()
@@ -114,6 +115,7 @@ module.exports = {
       
     }
   },
+
  
   likePost: async (req, res) => {
   try {
