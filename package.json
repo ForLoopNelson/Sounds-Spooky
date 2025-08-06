@@ -11,6 +11,7 @@
   "author": "Cory N",
   "license": "MIT",
   "dependencies": {
+    "audiomotion-analyzer": "^4.5.1",
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.25.1",
     "connect-mongo": "^3.2.0",
