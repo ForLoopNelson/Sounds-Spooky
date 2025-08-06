@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'gunmetl';
-  src: url('../fonts/gunmetl.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 @font-face {
   font-family: 'IronLung';
   src: url('../fonts/IronLung.ttf') format('truetype');
