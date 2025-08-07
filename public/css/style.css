@@ -224,7 +224,7 @@ h1 {
 .fa-eye, .fa-eye-slash {
 position: absolute;
 left: 607px;
-margin-top: 6px;
+margin-top: 10px;
 cursor: pointer;
 }
 
@@ -656,7 +656,11 @@ box-shadow:  2px 2px 6px #4a8787,
     }
 
      .login-box {
-      width: 130%;
+      width: 190%;
+     }
+
+     .mobile-fit {
+      margin-right: 90px;
      }
 
     .signup-form {
@@ -682,7 +686,9 @@ box-shadow:  2px 2px 6px #4a8787,
     }
 
   
-
+    audio {
+      width: 95%;
+    }
     
 
     #logo {
