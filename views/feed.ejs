@@ -25,12 +25,13 @@
                 <p><strong>Created By:</strong>
                   <%= yourPosts[i].user.userName %>
                 </p>
-                <audio controls>
+                <audio controls id="audio" crossorigin="anonymous">
                   <source src="<%= yourPosts[i].audio %>" type="">
                 </audio>
                 <!-- </a> -->
-
+                
               </li>
+              
               <% } %>
           </ul>
         </div>
