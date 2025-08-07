@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const audioMotion = new AudioMotionAnalyzer(visualizerContainer, {
     source: audio,
     height: 200,
-    mode: 1,
+    mode: 3,
     barSpace: 0.5,
     barWidth: 8,
-    gradient: 'rainbow',
+    gradient: 'prism',
     showScaleX: false,
     showScaleY: false
   });
