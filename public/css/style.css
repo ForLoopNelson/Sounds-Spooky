@@ -463,6 +463,18 @@ box-shadow:  2px 2px 6px #4a8787,
 
 /* Mobile Queries ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+
+@media (830px <=width <=1024px) {
+  .fa-eye,
+    .fa-eye-slash {
+      margin-top: 20px;
+      left: 450px;
+     
+    }
+  
+  }
+
+
 @media screen and (max-width: 1399px) {
    .box-bg {
     max-width: 100%;
@@ -470,7 +482,10 @@ box-shadow:  2px 2px 6px #4a8787,
    
     
   }
-
+.fa-eye, .fa-eye-slash {
+  margin-top: 30px;
+  left: 470px;
+}
  
 }
 
@@ -532,6 +547,10 @@ box-shadow:  2px 2px 6px #4a8787,
 
   .desc-box {
     padding-left: 10px;
+  }
+
+  .google {
+    width: 70%;
   }
 
   .fa-trash {
