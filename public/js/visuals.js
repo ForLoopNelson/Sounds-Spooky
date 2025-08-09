@@ -9,12 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const audioMotion = new AudioMotionAnalyzer(visualizerContainer, {
     source: audio,
     height: 200,
-    mode: 3,
-    barSpace: 0.5,
+    mode: 5,
+    barSpace: 0.4,
     barWidth: 8,
     gradient: 'prism',
+    colorMode: 'bar-level',
+    peakHoldTime: 600,
     showScaleX: false,
-    showScaleY: false
+    showScaleY: false,
+   
   });
 
 
