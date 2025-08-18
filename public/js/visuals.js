@@ -50,6 +50,11 @@ radialBtn.addEventListener('click', () => {
     // Show visualizer only when user starts playback
   audio.addEventListener("play", () => {
     visualizerContainer.style.display = "block";
+
+    //mobile use test!
+     if (audioMotion.audioCtx.state === "suspended") {
+    audioMotion.audioCtx.resume();
+  }
   });
 
   // Hide visualizer when audio is paused or ends
