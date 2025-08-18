@@ -732,6 +732,16 @@ input[type="range"] {
       width: 100%;
     }
 
+
+    label {
+      font-size: 21px;
+    }
+    input[type="range"] {
+      height: 16px;
+
+  
+  }
+
   
     audio {
       width: 95%;
