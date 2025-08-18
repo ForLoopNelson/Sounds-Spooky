@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const audioMotion = new AudioMotionAnalyzer(visualizerContainer, {
     source: audio,
     height: 200,
-    mode: 5,
-    barSpace: 0.4,
-    barWidth: 8,
+    mode: 4,
+    barSpace: 0.3,
     gradient: 'prism',
     colorMode: 'bar-level',
-    peakHoldTime: 600,
+    peakHoldTime: 800,
+    frequencyScale: 'log',
     showScaleX: false,
     showScaleY: false,
    
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     visualizerContainer.style.display = "block";
   });
 
-  // Optional: Hide visualizer when audio is paused or ended
+  // Hide visualizer when audio is paused or ends
   audio.addEventListener("pause", () => {
     visualizerContainer.style.display = "none";
   });
