@@ -15,7 +15,13 @@
             
           </audio>
           </div>
-          <div id="visualizer" style="display: none;"></div>
+          <div id="visualizer" style="display: none;">
+            <label>Bar Spacing: <input type="range" id="barSpace" min="0" max="1" step="0.1" value="0.6"></label>
+            <br>
+            <button id="mirrorToggle">Mirror</button>
+            <button id="radialToggle">Radial</button>
+
+          </div>
           <!-- Like and trash -->
           <div class="row justify-content-between">
             <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
