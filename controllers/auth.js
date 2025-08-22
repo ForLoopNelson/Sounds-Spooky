@@ -1,5 +1,6 @@
 const passport = require("passport")
 const validator = require("validator")
+const bcrypt = require("bcrypt");
 const User = require("../models/User")
 
 exports.getLogin = (req, res) => {
@@ -165,6 +166,22 @@ exports.deleteProfileForm = (req, res) => {
 exports.deleteProfile = async (req, res) => {
   try {
     const userId = req.user._id;
+     const { password, confirmPassword } = req.body;
+
+    // 1. Confirm passwords match
+    if (password !== confirmPassword) {
+      req.flash("errors", { msg: "Passwords do not match." });
+      return res.redirect("/profile");
+    }
+
+    // 2. Validate entered password against DB
+    const user = await User.findById(userId);
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+      req.flash("errors", { msg: "Invalid password." });
+      return res.redirect("/profile");
+    }
 
     // Find all posts by the user
     const userPosts = await Post.find({ user: userId });
