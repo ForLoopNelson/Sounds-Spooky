@@ -46,6 +46,41 @@ h1 {
   text-shadow: 0 0 7px #73e6e6;
 }
 
+@keyframes flicker {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
+        0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+        0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa,
+        0 0 102px #0fa, 0 0 151px #0fa;
+    opacity: 1;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    opacity: 0.7;
+  }
+}
+
+
+
+.title-flicker {
+  animation: flicker 1.5s infinite;
+ 
+}
+
+.flicker-card {
+  text-shadow: -2px -3px 4px #0fa, 0 4px 3px black, -4px 1px 0 #00bc8c, 0 -2px 0 black, 0 5px 8px #73e6e6;
+}
+
 
 .head-bg {
   background: linear-gradient(145deg, #201f1f,#131111,#242424, #131111);
@@ -69,9 +104,7 @@ h1 {
   border-radius: 40px;
 }
 
-/* .audio-controls {
-  
-} */
+
 
 #current-user {
      background: linear-gradient(145deg, #201f1f,#131111, #131111, #242424);
