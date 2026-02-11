@@ -38,7 +38,16 @@
         </div>
 
     </header>
+<script type="module">
+    import { VFX } from 'https://cdn.jsdelivr.net/npm/@vfx-js/core/+esm';
 
+    const img = document.querySelector('#main-img');
+
+    if (img) {
+        const vfx = new VFX();
+        vfx.add(img, { shader: "rgbShift" });
+    }
+</script>
 </body>
 
 </html>

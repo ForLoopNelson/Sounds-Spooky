@@ -62,12 +62,23 @@ h1 {
     opacity: 1;
   }
 
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-    opacity: 0.7;
-  }
+ 16%,
+ 20%,
+ 63%,
+ 75% {
+   opacity: 0.4;
+   /* quick dip */
+   text-shadow: none;
+ }
+
+ 21%,
+ 65% {
+   opacity: 0.6;
+   /* weak glow */
+   text-shadow:
+     0 0 5px #0fa,
+     0 0 15px #0fa;
+ }
 }
 
 
@@ -77,8 +88,14 @@ h1 {
  
 }
 
+/* text shadow OG for index page. */
+/* .test {
+  text-shadow: -2px -3px 8px #0fa, 0 4px 10px black, -4px 3px 0 #00bc8c, 0 3px 4px black, 0 7px 2px #73e6e6;
+} */
+
 .flicker-card {
-  text-shadow: -2px -3px 4px #0fa, 0 4px 3px black, -4px 1px 0 #00bc8c, 0 -2px 0 black, 0 5px 8px #73e6e6;
+  
+  text-shadow: 1px 0 0 black, 0 -1px 2px #0fa, -1px 0 0 black, -1px 3px 4px #00bc8c, 0 4px 3px #73e6e6;
 }
 
 
