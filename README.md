@@ -35,15 +35,11 @@
 
 
 # NPM UPDATES!!!
--- 7 pkgs need updates. Only one is giving a deprecation Warning but not crashing the app yet. 
--- Made a branch to test with updates and it was a nightmare
--- NPM updates done. things seem okay. Will remove this section after further testing.
-
---Also check for pkgs that can be removed. I believe ffmpeg isn't used at all.
+-- There are still many npm pkgs that have newer versions. Check docs and see what ones need immediate attention.
 
 # TODO's
 
-`CHECK TO UPDATE CONNECT-MONGO DRIVER TO 4x`
+`UPDATE OUTDATED NPM PACKAGES. do one at a time to check for issues.`
 
 `Create a forgot password, reset password feature`
 
