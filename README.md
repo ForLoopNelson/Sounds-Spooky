@@ -39,6 +39,9 @@
 
 # TODO's
 
+> [!CAUTION]
+> On Brave browsers vfx-js has whole screen shaking instead of the vfx rendering only on #main-img
+
 `UPDATE OUTDATED NPM PACKAGES. do one at a time to check for issues.`
 
 `Create a forgot password, reset password feature`
