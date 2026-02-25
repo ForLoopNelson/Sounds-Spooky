@@ -41,12 +41,13 @@
 <script type="module">
     import { VFX } from 'https://cdn.jsdelivr.net/npm/@vfx-js/core/+esm';
 
+    window.onload = function() {
     const img = document.querySelector('#main-img');
 
     if (img) {
         const vfx = new VFX();
         vfx.add(img, { shader: "rgbShift" });
-    }
+    }}
 </script>
 </body>
 
