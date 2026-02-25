@@ -200,8 +200,10 @@ h1 {
 
 #main-img {
   width: 7%;
+  height: auto;
   padding-bottom: 20px;
-  filter: drop-shadow(1px 3px #00bc8c);
+  display: block;
+  margin: 0 auto;
   
 }
 
@@ -209,7 +211,10 @@ h1 {
   background: url(../imgs/creepy-hallway.webp) no-repeat;
   background-size:cover;
   background-position: 10% 31%;  
+  overflow: hidden;
 }
+
+
 
 #about-page {
   background: url(../imgs/ouija.webp) no-repeat;
