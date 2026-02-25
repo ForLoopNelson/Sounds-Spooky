@@ -39,8 +39,8 @@
 
 # TODO's
 
-> [!CAUTION]
-> On Brave browsers vfx-js has whole screen shaking instead of the vfx rendering only on #main-img
+> [!NOTE]
+> On Brave browsers vfx-js has whole screen shaking instead of the vfx rendering only on #main-img at the landing page. UPDATE: This appears to be fixed setting overlow: hidden. Test everywhere to make sure!
 
 `UPDATE OUTDATED NPM PACKAGES. do one at a time to check for issues.`
 
