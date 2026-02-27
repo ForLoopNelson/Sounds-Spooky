@@ -477,7 +477,7 @@ input[type="range"] {
 }
 
 
-#mirrorToggle, #radialToggle {
+#mirrorToggle, #radialToggle, #gradientBtn {
   margin-top: 5px;
   background-color: #2e2727;
   color: #efe9e9;
@@ -489,6 +489,10 @@ input[type="range"] {
   color: #131111;
 }
 #radialToggle.active {
+  background-color: #00bc8c;
+  color: #131111;
+}
+#gradientBtn.active {
   background-color: #00bc8c;
   color: #131111;
 }
