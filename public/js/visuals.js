@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const visualizerContainer = document.getElementById('visualizer');
   const mirrorBtn = document.getElementById('mirrorToggle');
   const radialBtn = document.getElementById('radialToggle');
+  const gradientBtn = document.getElementById('gradientBtn');
+  const gradientSelect = document.getElementById('gradientSelect');
 
   if (!audio || !visualizerContainer) return;
 
@@ -43,6 +45,19 @@ radialBtn.addEventListener('click', () => {
   radialBtn.classList.toggle('active');
   audioMotion.radial = !audioMotion.radial; 
   
+});
+
+gradientBtn.addEventListener('click', () => {
+  gradientSelect.selectedIndex =
+    (gradientSelect.selectedIndex + 1) % gradientSelect.options.length;
+
+  gradientSelect.dispatchEvent(new Event('change'));
+});
+
+gradientSelect.addEventListener('change', () => {
+  audioMotion.setOptions({
+    gradient: gradientSelect.value
+  });
 });
 
 
