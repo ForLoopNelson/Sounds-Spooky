@@ -58,6 +58,8 @@
 
 `Get more info into about page and style it cleaner.`
 
+`Clean up gradient toggle. Dropdown menu can get in the way.`
+
 # Google OAuth fixes
 -- Try this in passport.js 
 ``` userName: profile.displayName || `user_${profile.id}`, ```
