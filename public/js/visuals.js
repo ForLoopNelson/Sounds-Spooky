@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const radialBtn = document.getElementById('radialToggle');
   const gradientBtn = document.getElementById('gradientBtn');
   const gradientSelect = document.getElementById('gradientSelect');
+  const isMobile = window.innerWidth <= 480;
 
   if (!audio || !visualizerContainer) return;
 
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Create analyzer and connect audio
   const audioMotion = new AudioMotionAnalyzer(visualizerContainer, {
     source: audio,
-    height: 200,
+    height: isMobile ? 170 : 200,
     mode: 4,
     barSpace: 0.6,
     gradient: 'prism',
@@ -47,6 +48,7 @@ radialBtn.addEventListener('click', () => {
   
 });
 
+// select gradient from list of 4
 gradientBtn.addEventListener('click', () => {
   gradientSelect.selectedIndex =
     (gradientSelect.selectedIndex + 1) % gradientSelect.options.length;
@@ -60,6 +62,17 @@ gradientSelect.addEventListener('change', () => {
   });
 });
 
+//Use this instead maybe. try tomorrow
+// gradientBtn.addEventListener('click', () => {
+
+//   gradientSelect.selectedIndex =
+//     (gradientSelect.selectedIndex + 1) % gradientSelect.options.length;
+
+//   audioMotion.setOptions({
+//     gradient: gradientSelect.value
+//   });
+
+// });
 
 
     // Show visualizer only when user starts playback
