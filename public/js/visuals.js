@@ -48,31 +48,18 @@ radialBtn.addEventListener('click', () => {
   
 });
 
+
 // select gradient from list of 4
 gradientBtn.addEventListener('click', () => {
+
   gradientSelect.selectedIndex =
     (gradientSelect.selectedIndex + 1) % gradientSelect.options.length;
 
-  gradientSelect.dispatchEvent(new Event('change'));
-});
-
-gradientSelect.addEventListener('change', () => {
   audioMotion.setOptions({
     gradient: gradientSelect.value
   });
+
 });
-
-//Use this instead maybe. try tomorrow
-// gradientBtn.addEventListener('click', () => {
-
-//   gradientSelect.selectedIndex =
-//     (gradientSelect.selectedIndex + 1) % gradientSelect.options.length;
-
-//   audioMotion.setOptions({
-//     gradient: gradientSelect.value
-//   });
-
-// });
 
 
     // Show visualizer only when user starts playback
