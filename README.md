@@ -54,11 +54,11 @@
 
 `In Post page change Add a comment to stand out more from the background`
 
-`Audio plays for 30 seconds regarless if the audio file stops before that` --This seems resolved
+`Audio plays for 30 seconds regarless if the audio file stops before that`
 
 `Get more info into about page and style it cleaner.`
 
-`Clean up gradient toggle. Dropdown menu can get in the way.`
+`Clean up gradient toggle. Dropdown menu can get in the way, and choosing from dropdown menu doesn't make gradient change only the button does.`
 
 # Google OAuth fixes
 -- Try this in passport.js 
