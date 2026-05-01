@@ -36,7 +36,7 @@ module.exports = {
       const comments = await Comment.find({ post: req.params.id })
         .sort({ createdAt: "desc" })
         .lean()
-      res.render("post.ejs", { post: post, user: req.user, comments: comments })
+      res.render("post.ejs", { post: post, user: req.user, comments: comments, userId: req.user._id })
     } catch (err) {
       console.log(err)
     }
