@@ -32,7 +32,7 @@
           <!-- Like and trash -->
           <div class="row justify-content-between">
             <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
-              <button class="btn btn-primary fa fa-heart" type="submit"></button>
+              <button class="btn btn-primary fa fa-heart <%= post.likedBy.some(u => u._id.toString() === userId.toString()) ? 'liked' : '' %>" type="submit"></button>
             </form>
             <h3 class="col-3 col-sm-3 d-flex align-items-center add-pad likes liked-by" data-postid="<%= post._id %>"
               style="cursor: pointer;" role="button" tabindex="0">
