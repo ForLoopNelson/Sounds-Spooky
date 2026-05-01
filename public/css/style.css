@@ -521,6 +521,10 @@ input[type="range"] {
   
 }
 
+.fa-heart.liked {
+  color: rgb(212, 2, 2);
+}
+
 .comment-even {
  border: 2px solid #131111 ;
  background: linear-gradient(220deg, rgba(19, 17, 17, 1), rgba(32, 31, 31, 0.9), rgb(28, 28, 36));
