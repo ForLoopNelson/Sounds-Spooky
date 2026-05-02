@@ -230,7 +230,10 @@ h1 {
 
 .about-text {
   font-size: 18px;
+  margin-top: 0 !important;
 }
+
+
 
 
  footer {
