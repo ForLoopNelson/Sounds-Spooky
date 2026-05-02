@@ -699,6 +699,7 @@ input[type="range"] {
     background-size: cover;
     background-position: 40% ;
     height: 100vh;
+    overflow: auto;
     }
     #main-img {
       height: 13vh;
