@@ -56,7 +56,7 @@
 
 `Audio plays for 30 seconds regarless if the audio file stops before that`
 
-`Get more info into about page and style it cleaner.`
+`Get more info into about page and style it cleaner. Seriously, it's an ugly mess!`
 
 `Clean up gradient toggle. Dropdown menu can get in the way, and choosing from dropdown menu doesn't make gradient change only the button does.`
 
